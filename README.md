@@ -38,5 +38,8 @@ FROM_BLOCK=6868100
 Simply start the service.
 
 ```
-yarn start
+yarn start BBO Transfer
 ```
+
+`BBO` is contract Name have config in ./abi/config
+`Transfer` is event Name
