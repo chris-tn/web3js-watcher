@@ -32,6 +32,9 @@ FIREBASE_DB_URL=https://eth1-xxxx.firebaseio.com
 BBO_ADDRESS=0x84f7c44b6fed1080f647e354d552595be2cc602f
 FROM_BLOCK=6868100
 ```
+## Firebase admin or write permission:
+
+Add serviceAccount json following this path `./src/keys/serviceAccountKey.json`
 
 ## Running
 
@@ -41,5 +44,5 @@ Simply start the service.
 npm start BBO Transfer
 ```
 
-`BBO` is contract Name have config in ./abi/config
+`BBO` is contract Name have config in ./src/abi/config
 `Transfer` is event Name
