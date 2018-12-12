@@ -9,7 +9,7 @@
 ```
 git clone git@github.com:chris-tn/web3js-watcher.git
 cd web3js-watcher
-yarn install
+npm install
 ```
 
 Fill .env from .env.example 
@@ -38,7 +38,7 @@ FROM_BLOCK=6868100
 Simply start the service.
 
 ```
-yarn start BBO Transfer
+npm start BBO Transfer
 ```
 
 `BBO` is contract Name have config in ./abi/config
