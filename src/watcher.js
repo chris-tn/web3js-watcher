@@ -57,6 +57,7 @@ watchEvent = (contractName, eventName) => {
       let data = event.returnValues
       data.blockNumber = event.blockNumber
       data.txHash = event.transactionHash
+      console.log('writeEventData');
       writeEventData(contractName + '/' + eventName, event.transactionHash, data)
   })
   .on('changed', function(event){
@@ -93,7 +94,8 @@ getPastEvents = (contractName, eventName) => {
           data.txHash = events[i].transactionHash
           datas.push(data)
         }
-        return writeEventListData(contractName + '/' + eventName, datas);
+        console.log('writeEventListData');
+        return writeEventListData('BBOToken' + '/' + eventName, datas);
     });
   })
   

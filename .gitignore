@@ -55,3 +55,4 @@ jspm_packages
 #Notepad ++ backup 
 nppBackup
 *.bak
+src/.DS_Store
