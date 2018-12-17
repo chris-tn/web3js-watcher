@@ -56,3 +56,7 @@ jspm_packages
 nppBackup
 *.bak
 src/.DS_Store
+src/abi/ropsten/.DS_Store
+src/abi/.DS_Store
+src/.DS_Store
+.DS_Store

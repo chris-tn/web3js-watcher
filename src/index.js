@@ -1,21 +1,31 @@
 require('./env')
 
 const watcher = require('./watcher')
-const config = require('./abi/config.js')
 
 
 
-//Watch Job
-let job = config.BBFreelancerJob;
-for(let i = 0; i < job.events.length; i++) {
-	console.log('Begin watch event : ' + job.events[i] + ' from ' + job.name );
-	watcher.watchEvent(job.name, job.events[i])
+var contractName, eventName, network;
+
+if(process.argv[2]){
+	contractName = process.argv[2]
+} else {
+	console.log('not enough parameter');
+	process.exit(1);
+}
+if(process.argv[3]){
+	eventName = process.argv[3]
+} else {
+	console.log('not enough parameter');
+	process.exit(1);
 }
 
-//Watch Bid
-let bid = config.BBFreelancerBid;
-for(let i = 0; i < bid.events.length; i++) {
-	console.log('Begin watch event : ' + bid.events[i] + ' from ' + bid.name );
-	watcher.watchEvent(bid.name, bid.events[i])
+if(process.argv[4]){
+	network = process.argv[4]
+} else {
+	console.log('not enough parameter');
+	process.exit(1);
 }
 
+console.log('Starting watching eventName ' + eventName + ' from '+ contractName + ' at network '  + network)
+watcher.watchEvent(contractName, eventName, network)
+//watcher.getPastEvents(contractName, eventName, network)
