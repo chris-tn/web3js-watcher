@@ -1,1 +1,1 @@
-{"BBOTest":{"address":"0x3A7f24C08a983d590E8a8b8742415bCFAcd138AC","events":["Transfer"]}}
+{"BBOTest":{"address":"0x960BabF6653067C5774C99c06472641aF6F27468","events":["Transfer"]},"JOB":{"address":"0xf5b3efe3372e565E465B017A1906d544Bb63A459","events":["JobCreated","JobCanceled","JobStarted","JobFinished"]},"BID":{"address":"0xc8c8433A08b3d63e3c804E106C815E0B2E6F6372","events":["BidCreated","BidCanceled","BidAccepted"]}}

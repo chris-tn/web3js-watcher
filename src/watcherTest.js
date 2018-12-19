@@ -24,7 +24,7 @@ watchEvent = (contractName, eventName, address) => {
       if(error) {
         console.log('error', error);
       } else {
-        console.log(contractName + ' ' + eventName + ' at ' + new Date() + ' txHash -> ' + event.returnValues.txHash); 
+        cconsole.log(contractName + ' ' + eventName + ' at ' + new Date() + ' txHash -> ' + event.returnValues.txHash); 
       }
   })
   .on('data', function(event){
@@ -45,8 +45,7 @@ deployContract = async (abi, bytecode) => {
     var accounts = await web3.eth.personal.getAccounts();
    
     const tokenContract = await new web3.eth.Contract(abi, {
-        from : accounts[0],
-        gasPrice: '20000000000' 
+        from : accounts[0]
     });
 
     return new Promise((resolve, reject) => {
@@ -54,8 +53,6 @@ deployContract = async (abi, bytecode) => {
         data : bytecode
         }).send({
             from: accounts[0],
-            gas: 1500000,
-            gasPrice: '30000000000000'
         }).then(function(newContractInstance){
             resolve(newContractInstance.options);
         });

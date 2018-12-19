@@ -64,3 +64,4 @@ src/.DS_Store
 package-lock.json
 allFiredEvents
 .DS_Store
+test/contractAddress.json

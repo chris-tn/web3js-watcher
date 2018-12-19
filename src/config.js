@@ -7,7 +7,8 @@ const BBVoting_json = require('./json/BBVoting')
 const BBDispute_json = require('./json/BBDispute')
 const BBParams_json = require('./json/BBParams')
 const BBOTest_json = require('./json/BBOTest');
-
+const BBStorage_json = require('./json/BBStorage');
+const ProxyFactory_json = require('./json/UpgradeabilityProxyFactory');
 
 
 module.exports =  {
@@ -18,6 +19,8 @@ module.exports =  {
 		BBFreelancerPayment : BBFreelancerPayment_json,
 		BBRating : BBRating_json,
 		BBVotingHelper : BBVotingHelper_json,
+		BBStorage : BBStorage_json,
+		ProxyFactory : ProxyFactory_json
 	},
 	ropsten :  {
 		BBO : {
