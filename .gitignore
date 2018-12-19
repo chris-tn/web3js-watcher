@@ -62,3 +62,5 @@ src/.DS_Store
 .DS_Store
 .DS_Store
 package-lock.json
+allFiredEvents
+.DS_Store

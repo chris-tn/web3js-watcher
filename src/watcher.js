@@ -1,5 +1,5 @@
 const Web3 = require('web3')
-const contract_abi = require('./abi/config')
+const contract_abi = require('./config')
 
 var admin = require("firebase-admin");
 var serviceAccount = require("./keys/serviceAccountKey.json");
@@ -47,7 +47,7 @@ watchEvent = (contractName, eventName, network) => {
   // Instantiate token contract object with JSON ABI and address
 
   const tokenContract = new web3.eth.Contract(
-    contract_abi[network][contractName].abi,contract_abi[network][contractName].address,
+    contract_abi.json[contractName],contract_abi[network][contractName].address,
     (error, result) => { if (error) console.log(error) }
   )
   let options = {
@@ -81,7 +81,7 @@ getPastEvents = (contractName, eventName, network) => {
     return
   //todo
   const tokenContract = new web3.eth.Contract(
-    contract_abi[network][contractName].abi,contract_abi[network][contractName].address,
+    contract_abi.json[contractName].abi,contract_abi[network][contractName].address,
     (error, result) => { if (error) console.log(error) }
   )
   return getLatestBlock(contractName + '/' + eventName, function(blockNumber){
@@ -110,6 +110,8 @@ getPastEvents = (contractName, eventName, network) => {
   
 }
 module.exports = {
-  watchEvent, 
-  getPastEvents
+  watchEvent,
+  writeEventData, 
+  getPastEvents,
+  db
 }

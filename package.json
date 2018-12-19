@@ -8,8 +8,10 @@
   },
   "scripts": {
     "start": "node src/index.js",
-    "test": "truffle test --compile-all",
-    "testrpc": "testrpc-sc --gasLimit 0xfffffffffff --gasPrice 0x01 --network-id 777 -p 8545"
+    "test": "mocha",
+    "testrpc": "testrpc-sc --gasLimit 0xfffffffffff --gasPrice 0x01 --network-id 777 -p 8545",
+    "deploytest" : "node src/initContract.js",
+    "watch" : "node src/startWatcher.js"
   },
   "keywords": [],
   "author": "Chris Nguyen <ksmanhtuong103@gmail.com>",
