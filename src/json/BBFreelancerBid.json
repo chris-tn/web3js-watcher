@@ -442,7 +442,7 @@
         "id": 1546,
         "nodeType": "ImportDirective",
         "scope": 1945,
-        "sourceUnit": 3194,
+        "sourceUnit": 3187,
         "src": "147:35:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -453,7 +453,7 @@
         "id": 1547,
         "nodeType": "ImportDirective",
         "scope": 1945,
-        "sourceUnit": 3742,
+        "sourceUnit": 3735,
         "src": "183:21:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -481,8 +481,8 @@
         ],
         "contractDependencies": [
           1542,
-          4518,
-          9072
+          4511,
+          9065
         ],
         "contractKind": "contract",
         "documentation": "@title BBFreelancerBid",
@@ -491,8 +491,8 @@
         "linearizedBaseContracts": [
           1944,
           1542,
-          4518,
-          9072
+          4511,
+          9065
         ],
         "name": "BBFreelancerBid",
         "nodeType": "ContractDefinition",
@@ -507,7 +507,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_BBFreelancerPayment_$3193",
+              "typeIdentifier": "t_contract$_BBFreelancerPayment_$3186",
               "typeString": "contract BBFreelancerPayment"
             },
             "typeName": {
@@ -515,10 +515,10 @@
               "id": 1550,
               "name": "BBFreelancerPayment",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3193,
+              "referencedDeclaration": 3186,
               "src": "284:19:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_BBFreelancerPayment_$3193",
+                "typeIdentifier": "t_contract$_BBFreelancerPayment_$3186",
                 "typeString": "contract BBFreelancerPayment"
               }
             },
@@ -555,10 +555,10 @@
                 "name": "BBFreelancerPayment",
                 "nodeType": "Identifier",
                 "overloadedDeclarations": [],
-                "referencedDeclaration": 3193,
+                "referencedDeclaration": 3186,
                 "src": "321:19:3",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_type$_t_contract$_BBFreelancerPayment_$3193_$",
+                  "typeIdentifier": "t_type$_t_contract$_BBFreelancerPayment_$3186_$",
                   "typeString": "type(contract BBFreelancerPayment)"
                 }
               },
@@ -572,7 +572,7 @@
               "nodeType": "FunctionCall",
               "src": "321:24:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_BBFreelancerPayment_$3193",
+                "typeIdentifier": "t_contract$_BBFreelancerPayment_$3186",
                 "typeString": "contract BBFreelancerPayment"
               }
             },
@@ -601,7 +601,7 @@
                       "referencedDeclaration": 1554,
                       "src": "507:7:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_BBFreelancerPayment_$3193",
+                        "typeIdentifier": "t_contract$_BBFreelancerPayment_$3186",
                         "typeString": "contract BBFreelancerPayment"
                       }
                     },
@@ -635,10 +635,10 @@
                         "name": "BBFreelancerPayment",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3193,
+                        "referencedDeclaration": 3186,
                         "src": "517:19:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_BBFreelancerPayment_$3193_$",
+                          "typeIdentifier": "t_type$_t_contract$_BBFreelancerPayment_$3186_$",
                           "typeString": "type(contract BBFreelancerPayment)"
                         }
                       },
@@ -652,13 +652,13 @@
                       "nodeType": "FunctionCall",
                       "src": "517:35:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_BBFreelancerPayment_$3193",
+                        "typeIdentifier": "t_contract$_BBFreelancerPayment_$3186",
                         "typeString": "contract BBFreelancerPayment"
                       }
                     },
                     "src": "507:45:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_BBFreelancerPayment_$3193",
+                      "typeIdentifier": "t_contract$_BBFreelancerPayment_$3186",
                       "typeString": "contract BBFreelancerPayment"
                     }
                   },
@@ -683,7 +683,7 @@
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 9002,
+                  "referencedDeclaration": 8995,
                   "src": "484:9:3",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -1105,7 +1105,7 @@
                                     "name": "msg",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 9953,
+                                    "referencedDeclaration": 9946,
                                     "src": "1232:3:3",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_magic_message",
@@ -1166,10 +1166,10 @@
                                   "name": "BBLib",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 3741,
+                                  "referencedDeclaration": 3734,
                                   "src": "1214:5:3",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_type$_t_contract$_BBLib_$3741_$",
+                                    "typeIdentifier": "t_type$_t_contract$_BBLib_$3734_$",
                                     "typeString": "type(library BBLib)"
                                   }
                                 },
@@ -1180,7 +1180,7 @@
                                 "lValueRequested": false,
                                 "memberName": "toB32",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 3292,
+                                "referencedDeclaration": 3285,
                                 "src": "1214:11:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_address_$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -1215,10 +1215,10 @@
                               "name": "bbs",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 4441,
+                              "referencedDeclaration": 4434,
                               "src": "1202:3:3",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_BBStorage_$4858",
+                                "typeIdentifier": "t_contract$_BBStorage_$4851",
                                 "typeString": "contract BBStorage"
                               }
                             },
@@ -1229,7 +1229,7 @@
                             "lValueRequested": false,
                             "memberName": "getBool",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 4671,
+                            "referencedDeclaration": 4664,
                             "src": "1202:11:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_bool_$",
@@ -1288,10 +1288,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9956,
-                        9957
+                        9949,
+                        9950
                       ],
-                      "referencedDeclaration": 9956,
+                      "referencedDeclaration": 9949,
                       "src": "1193:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1401,10 +1401,10 @@
                                   "name": "BBLib",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 3741,
+                                  "referencedDeclaration": 3734,
                                   "src": "1332:5:3",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_type$_t_contract$_BBLib_$3741_$",
+                                    "typeIdentifier": "t_type$_t_contract$_BBLib_$3734_$",
                                     "typeString": "type(library BBLib)"
                                   }
                                 },
@@ -1415,7 +1415,7 @@
                                 "lValueRequested": false,
                                 "memberName": "toB32",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 3249,
+                                "referencedDeclaration": 3242,
                                 "src": "1332:11:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -1450,10 +1450,10 @@
                               "name": "bbs",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 4441,
+                              "referencedDeclaration": 4434,
                               "src": "1320:3:3",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_BBStorage_$4858",
+                                "typeIdentifier": "t_contract$_BBStorage_$4851",
                                 "typeString": "contract BBStorage"
                               }
                             },
@@ -1464,7 +1464,7 @@
                             "lValueRequested": false,
                             "memberName": "getUint",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 4635,
+                            "referencedDeclaration": 4628,
                             "src": "1320:11:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_uint256_$",
@@ -1503,10 +1503,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9956,
-                        9957
+                        9949,
+                        9950
                       ],
-                      "referencedDeclaration": 9956,
+                      "referencedDeclaration": 9949,
                       "src": "1305:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1552,7 +1552,7 @@
                           "name": "now",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9955,
+                          "referencedDeclaration": 9948,
                           "src": "1405:3:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -1616,10 +1616,10 @@
                                   "name": "BBLib",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 3741,
+                                  "referencedDeclaration": 3734,
                                   "src": "1423:5:3",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_type$_t_contract$_BBLib_$3741_$",
+                                    "typeIdentifier": "t_type$_t_contract$_BBLib_$3734_$",
                                     "typeString": "type(library BBLib)"
                                   }
                                 },
@@ -1630,7 +1630,7 @@
                                 "lValueRequested": false,
                                 "memberName": "toB32",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 3249,
+                                "referencedDeclaration": 3242,
                                 "src": "1423:11:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -1665,10 +1665,10 @@
                               "name": "bbs",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 4441,
+                              "referencedDeclaration": 4434,
                               "src": "1411:3:3",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_BBStorage_$4858",
+                                "typeIdentifier": "t_contract$_BBStorage_$4851",
                                 "typeString": "contract BBStorage"
                               }
                             },
@@ -1679,7 +1679,7 @@
                             "lValueRequested": false,
                             "memberName": "getUint",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 4635,
+                            "referencedDeclaration": 4628,
                             "src": "1411:11:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_uint256_$",
@@ -1718,10 +1718,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9956,
-                        9957
+                        9949,
+                        9950
                       ],
-                      "referencedDeclaration": 9956,
+                      "referencedDeclaration": 9949,
                       "src": "1397:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1816,10 +1816,10 @@
                                   "name": "BBLib",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 3741,
+                                  "referencedDeclaration": 3734,
                                   "src": "1488:5:3",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_type$_t_contract$_BBLib_$3741_$",
+                                    "typeIdentifier": "t_type$_t_contract$_BBLib_$3734_$",
                                     "typeString": "type(library BBLib)"
                                   }
                                 },
@@ -1830,7 +1830,7 @@
                                 "lValueRequested": false,
                                 "memberName": "toB32",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 3249,
+                                "referencedDeclaration": 3242,
                                 "src": "1488:11:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -1865,10 +1865,10 @@
                               "name": "bbs",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 4441,
+                              "referencedDeclaration": 4434,
                               "src": "1473:3:3",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_BBStorage_$4858",
+                                "typeIdentifier": "t_contract$_BBStorage_$4851",
                                 "typeString": "contract BBStorage"
                               }
                             },
@@ -1879,7 +1879,7 @@
                             "lValueRequested": false,
                             "memberName": "getAddress",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 4623,
+                            "referencedDeclaration": 4616,
                             "src": "1473:14:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_address_$",
@@ -1938,10 +1938,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9956,
-                        9957
+                        9949,
+                        9950
                       ],
-                      "referencedDeclaration": 9956,
+                      "referencedDeclaration": 9949,
                       "src": "1465:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2032,10 +2032,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9956,
-                        9957
+                        9949,
+                        9950
                       ],
-                      "referencedDeclaration": 9956,
+                      "referencedDeclaration": 9949,
                       "src": "1535:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -2088,7 +2088,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 9953,
+                              "referencedDeclaration": 9946,
                               "src": "1618:3:3",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -2127,10 +2127,10 @@
                             "name": "BBLib",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3741,
+                            "referencedDeclaration": 3734,
                             "src": "1600:5:3",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_type$_t_contract$_BBLib_$3741_$",
+                              "typeIdentifier": "t_type$_t_contract$_BBLib_$3734_$",
                               "typeString": "type(library BBLib)"
                             }
                           },
@@ -2141,7 +2141,7 @@
                           "lValueRequested": false,
                           "memberName": "toB32",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 3269,
+                          "referencedDeclaration": 3262,
                           "src": "1600:11:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_address_$returns$_t_bytes32_$",
@@ -2193,10 +2193,10 @@
                         "name": "bbs",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4441,
+                        "referencedDeclaration": 4434,
                         "src": "1588:3:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_BBStorage_$4858",
+                          "typeIdentifier": "t_contract$_BBStorage_$4851",
                           "typeString": "contract BBStorage"
                         }
                       },
@@ -2207,7 +2207,7 @@
                       "lValueRequested": false,
                       "memberName": "setUint",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4715,
+                      "referencedDeclaration": 4708,
                       "src": "1588:11:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_uint256_$returns$__$",
@@ -2278,7 +2278,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 9953,
+                              "referencedDeclaration": 9946,
                               "src": "1711:3:3",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -2321,10 +2321,10 @@
                             "name": "BBLib",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3741,
+                            "referencedDeclaration": 3734,
                             "src": "1682:5:3",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_type$_t_contract$_BBLib_$3741_$",
+                              "typeIdentifier": "t_type$_t_contract$_BBLib_$3734_$",
                               "typeString": "type(library BBLib)"
                             }
                           },
@@ -2335,7 +2335,7 @@
                           "lValueRequested": false,
                           "memberName": "toB32",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 3315,
+                          "referencedDeclaration": 3308,
                           "src": "1682:11:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_bytes_memory_ptr_$_t_address_$returns$_t_bytes32_$",
@@ -2387,10 +2387,10 @@
                         "name": "bbs",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4441,
+                        "referencedDeclaration": 4434,
                         "src": "1670:3:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_BBStorage_$4858",
+                          "typeIdentifier": "t_contract$_BBStorage_$4851",
                           "typeString": "contract BBStorage"
                         }
                       },
@@ -2401,7 +2401,7 @@
                       "lValueRequested": false,
                       "memberName": "setUint",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4715,
+                      "referencedDeclaration": 4708,
                       "src": "1670:11:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_uint256_$returns$__$",
@@ -2451,7 +2451,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9953,
+                          "referencedDeclaration": 9946,
                           "src": "1762:3:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -2895,7 +2895,7 @@
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9940,
+                                "referencedDeclaration": 9933,
                                 "src": "3327:3:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_abi",
@@ -2942,7 +2942,7 @@
                           "name": "keccak256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9947,
+                          "referencedDeclaration": 9940,
                           "src": "3317:9:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
@@ -2977,10 +2977,10 @@
                         "name": "bbs",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4441,
+                        "referencedDeclaration": 4434,
                         "src": "3302:3:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_BBStorage_$4858",
+                          "typeIdentifier": "t_contract$_BBStorage_$4851",
                           "typeString": "contract BBStorage"
                         }
                       },
@@ -2991,7 +2991,7 @@
                       "lValueRequested": false,
                       "memberName": "getAddress",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4623,
+                      "referencedDeclaration": 4616,
                       "src": "3302:14:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_address_$",
@@ -3071,10 +3071,10 @@
                                 "name": "BBLib",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 3741,
+                                "referencedDeclaration": 3734,
                                 "src": "3427:5:3",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_type$_t_contract$_BBLib_$3741_$",
+                                  "typeIdentifier": "t_type$_t_contract$_BBLib_$3734_$",
                                   "typeString": "type(library BBLib)"
                                 }
                               },
@@ -3085,7 +3085,7 @@
                               "lValueRequested": false,
                               "memberName": "toB32",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 3229,
+                              "referencedDeclaration": 3222,
                               "src": "3427:11:3",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_bytes32_$",
@@ -3120,10 +3120,10 @@
                             "name": "bbs",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 4441,
+                            "referencedDeclaration": 4434,
                             "src": "3412:3:3",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_BBStorage_$4858",
+                              "typeIdentifier": "t_contract$_BBStorage_$4851",
                               "typeString": "contract BBStorage"
                             }
                           },
@@ -3134,7 +3134,7 @@
                           "lValueRequested": false,
                           "memberName": "getAddress",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 4623,
+                          "referencedDeclaration": 4616,
                           "src": "3412:14:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_address_$",
@@ -3165,7 +3165,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9953,
+                          "referencedDeclaration": 9946,
                           "src": "3450:3:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -3318,7 +3318,7 @@
                                         "name": "msg",
                                         "nodeType": "Identifier",
                                         "overloadedDeclarations": [],
-                                        "referencedDeclaration": 9953,
+                                        "referencedDeclaration": 9946,
                                         "src": "3644:3:3",
                                         "typeDescriptions": {
                                           "typeIdentifier": "t_magic_message",
@@ -3357,7 +3357,7 @@
                                       "name": "abi",
                                       "nodeType": "Identifier",
                                       "overloadedDeclarations": [],
-                                      "referencedDeclaration": 9940,
+                                      "referencedDeclaration": 9933,
                                       "src": "3621:3:3",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_magic_abi",
@@ -3404,7 +3404,7 @@
                                 "name": "keccak256",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9947,
+                                "referencedDeclaration": 9940,
                                 "src": "3611:9:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
@@ -3439,10 +3439,10 @@
                               "name": "bbs",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 4441,
+                              "referencedDeclaration": 4434,
                               "src": "3599:3:3",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_BBStorage_$4858",
+                                "typeIdentifier": "t_contract$_BBStorage_$4851",
                                 "typeString": "contract BBStorage"
                               }
                             },
@@ -3453,7 +3453,7 @@
                             "lValueRequested": false,
                             "memberName": "getUint",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 4635,
+                            "referencedDeclaration": 4628,
                             "src": "3599:11:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_uint256_$",
@@ -3543,10 +3543,10 @@
                             "name": "require",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [
-                              9956,
-                              9957
+                              9949,
+                              9950
                             ],
-                            "referencedDeclaration": 9956,
+                            "referencedDeclaration": 9949,
                             "src": "3666:7:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -3599,7 +3599,7 @@
                                     "name": "msg",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 9953,
+                                    "referencedDeclaration": 9946,
                                     "src": "3721:3:3",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_magic_message",
@@ -3660,10 +3660,10 @@
                                   "name": "BBLib",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 3741,
+                                  "referencedDeclaration": 3734,
                                   "src": "3703:5:3",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_type$_t_contract$_BBLib_$3741_$",
+                                    "typeIdentifier": "t_type$_t_contract$_BBLib_$3734_$",
                                     "typeString": "type(library BBLib)"
                                   }
                                 },
@@ -3674,7 +3674,7 @@
                                 "lValueRequested": false,
                                 "memberName": "toB32",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 3292,
+                                "referencedDeclaration": 3285,
                                 "src": "3703:11:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_address_$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -3731,10 +3731,10 @@
                               "name": "bbs",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 4441,
+                              "referencedDeclaration": 4434,
                               "src": "3691:3:3",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_BBStorage_$4858",
+                                "typeIdentifier": "t_contract$_BBStorage_$4851",
                                 "typeString": "contract BBStorage"
                               }
                             },
@@ -3745,7 +3745,7 @@
                             "lValueRequested": false,
                             "memberName": "setBool",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 4763,
+                            "referencedDeclaration": 4756,
                             "src": "3691:11:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_bool_$returns$__$",
@@ -3790,7 +3790,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 9953,
+                              "referencedDeclaration": 9946,
                               "src": "3765:3:3",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -3900,7 +3900,7 @@
                                             "name": "abi",
                                             "nodeType": "Identifier",
                                             "overloadedDeclarations": [],
-                                            "referencedDeclaration": 9940,
+                                            "referencedDeclaration": 9933,
                                             "src": "3827:3:3",
                                             "typeDescriptions": {
                                               "typeIdentifier": "t_magic_abi",
@@ -3947,7 +3947,7 @@
                                       "name": "keccak256",
                                       "nodeType": "Identifier",
                                       "overloadedDeclarations": [],
-                                      "referencedDeclaration": 9947,
+                                      "referencedDeclaration": 9940,
                                       "src": "3817:9:3",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
@@ -4004,10 +4004,10 @@
                                     "name": "bbs",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 4441,
+                                    "referencedDeclaration": 4434,
                                     "src": "3802:3:3",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_contract$_BBStorage_$4858",
+                                      "typeIdentifier": "t_contract$_BBStorage_$4851",
                                       "typeString": "contract BBStorage"
                                     }
                                   },
@@ -4018,7 +4018,7 @@
                                   "lValueRequested": false,
                                   "memberName": "setAddress",
                                   "nodeType": "MemberAccess",
-                                  "referencedDeclaration": 4699,
+                                  "referencedDeclaration": 4692,
                                   "src": "3802:14:3",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_address_$returns$__$",
@@ -4115,7 +4115,7 @@
                                       "name": "abi",
                                       "nodeType": "Identifier",
                                       "overloadedDeclarations": [],
-                                      "referencedDeclaration": 9940,
+                                      "referencedDeclaration": 9933,
                                       "src": "3519:3:3",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_magic_abi",
@@ -4162,7 +4162,7 @@
                                 "name": "keccak256",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9947,
+                                "referencedDeclaration": 9940,
                                 "src": "3509:9:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
@@ -4219,10 +4219,10 @@
                               "name": "bbs",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 4441,
+                              "referencedDeclaration": 4434,
                               "src": "3494:3:3",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_BBStorage_$4858",
+                                "typeIdentifier": "t_contract$_BBStorage_$4851",
                                 "typeString": "contract BBStorage"
                               }
                             },
@@ -4233,7 +4233,7 @@
                             "lValueRequested": false,
                             "memberName": "setAddress",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 4699,
+                            "referencedDeclaration": 4692,
                             "src": "3494:14:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_address_$returns$__$",
@@ -4317,10 +4317,10 @@
                             "name": "BBLib",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3741,
+                            "referencedDeclaration": 3734,
                             "src": "3905:5:3",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_type$_t_contract$_BBLib_$3741_$",
+                              "typeIdentifier": "t_type$_t_contract$_BBLib_$3734_$",
                               "typeString": "type(library BBLib)"
                             }
                           },
@@ -4331,7 +4331,7 @@
                           "lValueRequested": false,
                           "memberName": "toB32",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 3249,
+                          "referencedDeclaration": 3242,
                           "src": "3905:11:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -4388,10 +4388,10 @@
                         "name": "bbs",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4441,
+                        "referencedDeclaration": 4434,
                         "src": "3893:3:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_BBStorage_$4858",
+                          "typeIdentifier": "t_contract$_BBStorage_$4851",
                           "typeString": "contract BBStorage"
                         }
                       },
@@ -4402,7 +4402,7 @@
                       "lValueRequested": false,
                       "memberName": "setUint",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4715,
+                      "referencedDeclaration": 4708,
                       "src": "3893:11:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_uint256_$returns$__$",
@@ -4452,7 +4452,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9953,
+                          "referencedDeclaration": 9946,
                           "src": "3971:3:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -4696,7 +4696,7 @@
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9940,
+                                "referencedDeclaration": 9933,
                                 "src": "4311:3:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_abi",
@@ -4743,7 +4743,7 @@
                           "name": "keccak256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9947,
+                          "referencedDeclaration": 9940,
                           "src": "4301:9:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
@@ -4778,10 +4778,10 @@
                         "name": "bbs",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4441,
+                        "referencedDeclaration": 4434,
                         "src": "4289:3:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_BBStorage_$4858",
+                          "typeIdentifier": "t_contract$_BBStorage_$4851",
                           "typeString": "contract BBStorage"
                         }
                       },
@@ -4792,7 +4792,7 @@
                       "lValueRequested": false,
                       "memberName": "getUint",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4635,
+                      "referencedDeclaration": 4628,
                       "src": "4289:11:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_uint256_$",
@@ -4882,10 +4882,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9956,
-                        9957
+                        9949,
+                        9950
                       ],
-                      "referencedDeclaration": 9956,
+                      "referencedDeclaration": 9949,
                       "src": "4353:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -4980,10 +4980,10 @@
                                   "name": "BBLib",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 3741,
+                                  "referencedDeclaration": 3734,
                                   "src": "4395:5:3",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_type$_t_contract$_BBLib_$3741_$",
+                                    "typeIdentifier": "t_type$_t_contract$_BBLib_$3734_$",
                                     "typeString": "type(library BBLib)"
                                   }
                                 },
@@ -4994,7 +4994,7 @@
                                 "lValueRequested": false,
                                 "memberName": "toB32",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 3249,
+                                "referencedDeclaration": 3242,
                                 "src": "4395:11:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -5029,10 +5029,10 @@
                               "name": "bbs",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 4441,
+                              "referencedDeclaration": 4434,
                               "src": "4383:3:3",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_BBStorage_$4858",
+                                "typeIdentifier": "t_contract$_BBStorage_$4851",
                                 "typeString": "contract BBStorage"
                               }
                             },
@@ -5043,7 +5043,7 @@
                             "lValueRequested": false,
                             "memberName": "getBool",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 4671,
+                            "referencedDeclaration": 4664,
                             "src": "4383:11:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_bool_$",
@@ -5102,10 +5102,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9956,
-                        9957
+                        9949,
+                        9950
                       ],
-                      "referencedDeclaration": 9956,
+                      "referencedDeclaration": 9949,
                       "src": "4375:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -5509,7 +5509,7 @@
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9940,
+                                "referencedDeclaration": 9933,
                                 "src": "4752:3:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_abi",
@@ -5556,7 +5556,7 @@
                           "name": "keccak256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9947,
+                          "referencedDeclaration": 9940,
                           "src": "4742:9:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
@@ -5608,10 +5608,10 @@
                         "name": "bbs",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4441,
+                        "referencedDeclaration": 4434,
                         "src": "4727:3:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_BBStorage_$4858",
+                          "typeIdentifier": "t_contract$_BBStorage_$4851",
                           "typeString": "contract BBStorage"
                         }
                       },
@@ -5622,7 +5622,7 @@
                       "lValueRequested": false,
                       "memberName": "setAddress",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4699,
+                      "referencedDeclaration": 4692,
                       "src": "4727:14:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_address_$returns$__$",
@@ -5706,7 +5706,7 @@
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9940,
+                                "referencedDeclaration": 9933,
                                 "src": "4830:3:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_abi",
@@ -5753,7 +5753,7 @@
                           "name": "keccak256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9947,
+                          "referencedDeclaration": 9940,
                           "src": "4820:9:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
@@ -5805,10 +5805,10 @@
                         "name": "bbs",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4441,
+                        "referencedDeclaration": 4434,
                         "src": "4808:3:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_BBStorage_$4858",
+                          "typeIdentifier": "t_contract$_BBStorage_$4851",
                           "typeString": "contract BBStorage"
                         }
                       },
@@ -5819,7 +5819,7 @@
                       "lValueRequested": false,
                       "memberName": "setUint",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4715,
+                      "referencedDeclaration": 4708,
                       "src": "4808:11:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_uint256_$returns$__$",
@@ -5900,10 +5900,10 @@
                             "name": "BBLib",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3741,
+                            "referencedDeclaration": 3734,
                             "src": "4903:5:3",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_type$_t_contract$_BBLib_$3741_$",
+                              "typeIdentifier": "t_type$_t_contract$_BBLib_$3734_$",
                               "typeString": "type(library BBLib)"
                             }
                           },
@@ -5914,7 +5914,7 @@
                           "lValueRequested": false,
                           "memberName": "toB32",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 3249,
+                          "referencedDeclaration": 3242,
                           "src": "4903:11:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -5971,10 +5971,10 @@
                         "name": "bbs",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4441,
+                        "referencedDeclaration": 4434,
                         "src": "4891:3:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_BBStorage_$4858",
+                          "typeIdentifier": "t_contract$_BBStorage_$4851",
                           "typeString": "contract BBStorage"
                         }
                       },
@@ -5985,7 +5985,7 @@
                       "lValueRequested": false,
                       "memberName": "setUint",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4715,
+                      "referencedDeclaration": 4708,
                       "src": "4891:11:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_uint256_$returns$__$",
@@ -6277,7 +6277,7 @@
         "id": 1546,
         "nodeType": "ImportDirective",
         "scope": 1945,
-        "sourceUnit": 3194,
+        "sourceUnit": 3187,
         "src": "147:35:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -6288,7 +6288,7 @@
         "id": 1547,
         "nodeType": "ImportDirective",
         "scope": 1945,
-        "sourceUnit": 3742,
+        "sourceUnit": 3735,
         "src": "183:21:3",
         "symbolAliases": [],
         "unitAlias": ""
@@ -6316,8 +6316,8 @@
         ],
         "contractDependencies": [
           1542,
-          4518,
-          9072
+          4511,
+          9065
         ],
         "contractKind": "contract",
         "documentation": "@title BBFreelancerBid",
@@ -6326,8 +6326,8 @@
         "linearizedBaseContracts": [
           1944,
           1542,
-          4518,
-          9072
+          4511,
+          9065
         ],
         "name": "BBFreelancerBid",
         "nodeType": "ContractDefinition",
@@ -6342,7 +6342,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_BBFreelancerPayment_$3193",
+              "typeIdentifier": "t_contract$_BBFreelancerPayment_$3186",
               "typeString": "contract BBFreelancerPayment"
             },
             "typeName": {
@@ -6350,10 +6350,10 @@
               "id": 1550,
               "name": "BBFreelancerPayment",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 3193,
+              "referencedDeclaration": 3186,
               "src": "284:19:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_BBFreelancerPayment_$3193",
+                "typeIdentifier": "t_contract$_BBFreelancerPayment_$3186",
                 "typeString": "contract BBFreelancerPayment"
               }
             },
@@ -6390,10 +6390,10 @@
                 "name": "BBFreelancerPayment",
                 "nodeType": "Identifier",
                 "overloadedDeclarations": [],
-                "referencedDeclaration": 3193,
+                "referencedDeclaration": 3186,
                 "src": "321:19:3",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_type$_t_contract$_BBFreelancerPayment_$3193_$",
+                  "typeIdentifier": "t_type$_t_contract$_BBFreelancerPayment_$3186_$",
                   "typeString": "type(contract BBFreelancerPayment)"
                 }
               },
@@ -6407,7 +6407,7 @@
               "nodeType": "FunctionCall",
               "src": "321:24:3",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_BBFreelancerPayment_$3193",
+                "typeIdentifier": "t_contract$_BBFreelancerPayment_$3186",
                 "typeString": "contract BBFreelancerPayment"
               }
             },
@@ -6436,7 +6436,7 @@
                       "referencedDeclaration": 1554,
                       "src": "507:7:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_BBFreelancerPayment_$3193",
+                        "typeIdentifier": "t_contract$_BBFreelancerPayment_$3186",
                         "typeString": "contract BBFreelancerPayment"
                       }
                     },
@@ -6470,10 +6470,10 @@
                         "name": "BBFreelancerPayment",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 3193,
+                        "referencedDeclaration": 3186,
                         "src": "517:19:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_contract$_BBFreelancerPayment_$3193_$",
+                          "typeIdentifier": "t_type$_t_contract$_BBFreelancerPayment_$3186_$",
                           "typeString": "type(contract BBFreelancerPayment)"
                         }
                       },
@@ -6487,13 +6487,13 @@
                       "nodeType": "FunctionCall",
                       "src": "517:35:3",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_BBFreelancerPayment_$3193",
+                        "typeIdentifier": "t_contract$_BBFreelancerPayment_$3186",
                         "typeString": "contract BBFreelancerPayment"
                       }
                     },
                     "src": "507:45:3",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_BBFreelancerPayment_$3193",
+                      "typeIdentifier": "t_contract$_BBFreelancerPayment_$3186",
                       "typeString": "contract BBFreelancerPayment"
                     }
                   },
@@ -6518,7 +6518,7 @@
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 9002,
+                  "referencedDeclaration": 8995,
                   "src": "484:9:3",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -6940,7 +6940,7 @@
                                     "name": "msg",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 9953,
+                                    "referencedDeclaration": 9946,
                                     "src": "1232:3:3",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_magic_message",
@@ -7001,10 +7001,10 @@
                                   "name": "BBLib",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 3741,
+                                  "referencedDeclaration": 3734,
                                   "src": "1214:5:3",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_type$_t_contract$_BBLib_$3741_$",
+                                    "typeIdentifier": "t_type$_t_contract$_BBLib_$3734_$",
                                     "typeString": "type(library BBLib)"
                                   }
                                 },
@@ -7015,7 +7015,7 @@
                                 "lValueRequested": false,
                                 "memberName": "toB32",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 3292,
+                                "referencedDeclaration": 3285,
                                 "src": "1214:11:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_address_$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -7050,10 +7050,10 @@
                               "name": "bbs",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 4441,
+                              "referencedDeclaration": 4434,
                               "src": "1202:3:3",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_BBStorage_$4858",
+                                "typeIdentifier": "t_contract$_BBStorage_$4851",
                                 "typeString": "contract BBStorage"
                               }
                             },
@@ -7064,7 +7064,7 @@
                             "lValueRequested": false,
                             "memberName": "getBool",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 4671,
+                            "referencedDeclaration": 4664,
                             "src": "1202:11:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_bool_$",
@@ -7123,10 +7123,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9956,
-                        9957
+                        9949,
+                        9950
                       ],
-                      "referencedDeclaration": 9956,
+                      "referencedDeclaration": 9949,
                       "src": "1193:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -7236,10 +7236,10 @@
                                   "name": "BBLib",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 3741,
+                                  "referencedDeclaration": 3734,
                                   "src": "1332:5:3",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_type$_t_contract$_BBLib_$3741_$",
+                                    "typeIdentifier": "t_type$_t_contract$_BBLib_$3734_$",
                                     "typeString": "type(library BBLib)"
                                   }
                                 },
@@ -7250,7 +7250,7 @@
                                 "lValueRequested": false,
                                 "memberName": "toB32",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 3249,
+                                "referencedDeclaration": 3242,
                                 "src": "1332:11:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -7285,10 +7285,10 @@
                               "name": "bbs",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 4441,
+                              "referencedDeclaration": 4434,
                               "src": "1320:3:3",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_BBStorage_$4858",
+                                "typeIdentifier": "t_contract$_BBStorage_$4851",
                                 "typeString": "contract BBStorage"
                               }
                             },
@@ -7299,7 +7299,7 @@
                             "lValueRequested": false,
                             "memberName": "getUint",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 4635,
+                            "referencedDeclaration": 4628,
                             "src": "1320:11:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_uint256_$",
@@ -7338,10 +7338,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9956,
-                        9957
+                        9949,
+                        9950
                       ],
-                      "referencedDeclaration": 9956,
+                      "referencedDeclaration": 9949,
                       "src": "1305:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -7387,7 +7387,7 @@
                           "name": "now",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9955,
+                          "referencedDeclaration": 9948,
                           "src": "1405:3:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -7451,10 +7451,10 @@
                                   "name": "BBLib",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 3741,
+                                  "referencedDeclaration": 3734,
                                   "src": "1423:5:3",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_type$_t_contract$_BBLib_$3741_$",
+                                    "typeIdentifier": "t_type$_t_contract$_BBLib_$3734_$",
                                     "typeString": "type(library BBLib)"
                                   }
                                 },
@@ -7465,7 +7465,7 @@
                                 "lValueRequested": false,
                                 "memberName": "toB32",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 3249,
+                                "referencedDeclaration": 3242,
                                 "src": "1423:11:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -7500,10 +7500,10 @@
                               "name": "bbs",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 4441,
+                              "referencedDeclaration": 4434,
                               "src": "1411:3:3",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_BBStorage_$4858",
+                                "typeIdentifier": "t_contract$_BBStorage_$4851",
                                 "typeString": "contract BBStorage"
                               }
                             },
@@ -7514,7 +7514,7 @@
                             "lValueRequested": false,
                             "memberName": "getUint",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 4635,
+                            "referencedDeclaration": 4628,
                             "src": "1411:11:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_uint256_$",
@@ -7553,10 +7553,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9956,
-                        9957
+                        9949,
+                        9950
                       ],
-                      "referencedDeclaration": 9956,
+                      "referencedDeclaration": 9949,
                       "src": "1397:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -7651,10 +7651,10 @@
                                   "name": "BBLib",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 3741,
+                                  "referencedDeclaration": 3734,
                                   "src": "1488:5:3",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_type$_t_contract$_BBLib_$3741_$",
+                                    "typeIdentifier": "t_type$_t_contract$_BBLib_$3734_$",
                                     "typeString": "type(library BBLib)"
                                   }
                                 },
@@ -7665,7 +7665,7 @@
                                 "lValueRequested": false,
                                 "memberName": "toB32",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 3249,
+                                "referencedDeclaration": 3242,
                                 "src": "1488:11:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -7700,10 +7700,10 @@
                               "name": "bbs",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 4441,
+                              "referencedDeclaration": 4434,
                               "src": "1473:3:3",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_BBStorage_$4858",
+                                "typeIdentifier": "t_contract$_BBStorage_$4851",
                                 "typeString": "contract BBStorage"
                               }
                             },
@@ -7714,7 +7714,7 @@
                             "lValueRequested": false,
                             "memberName": "getAddress",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 4623,
+                            "referencedDeclaration": 4616,
                             "src": "1473:14:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_address_$",
@@ -7773,10 +7773,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9956,
-                        9957
+                        9949,
+                        9950
                       ],
-                      "referencedDeclaration": 9956,
+                      "referencedDeclaration": 9949,
                       "src": "1465:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -7867,10 +7867,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9956,
-                        9957
+                        9949,
+                        9950
                       ],
-                      "referencedDeclaration": 9956,
+                      "referencedDeclaration": 9949,
                       "src": "1535:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -7923,7 +7923,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 9953,
+                              "referencedDeclaration": 9946,
                               "src": "1618:3:3",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -7962,10 +7962,10 @@
                             "name": "BBLib",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3741,
+                            "referencedDeclaration": 3734,
                             "src": "1600:5:3",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_type$_t_contract$_BBLib_$3741_$",
+                              "typeIdentifier": "t_type$_t_contract$_BBLib_$3734_$",
                               "typeString": "type(library BBLib)"
                             }
                           },
@@ -7976,7 +7976,7 @@
                           "lValueRequested": false,
                           "memberName": "toB32",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 3269,
+                          "referencedDeclaration": 3262,
                           "src": "1600:11:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_address_$returns$_t_bytes32_$",
@@ -8028,10 +8028,10 @@
                         "name": "bbs",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4441,
+                        "referencedDeclaration": 4434,
                         "src": "1588:3:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_BBStorage_$4858",
+                          "typeIdentifier": "t_contract$_BBStorage_$4851",
                           "typeString": "contract BBStorage"
                         }
                       },
@@ -8042,7 +8042,7 @@
                       "lValueRequested": false,
                       "memberName": "setUint",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4715,
+                      "referencedDeclaration": 4708,
                       "src": "1588:11:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_uint256_$returns$__$",
@@ -8113,7 +8113,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 9953,
+                              "referencedDeclaration": 9946,
                               "src": "1711:3:3",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -8156,10 +8156,10 @@
                             "name": "BBLib",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3741,
+                            "referencedDeclaration": 3734,
                             "src": "1682:5:3",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_type$_t_contract$_BBLib_$3741_$",
+                              "typeIdentifier": "t_type$_t_contract$_BBLib_$3734_$",
                               "typeString": "type(library BBLib)"
                             }
                           },
@@ -8170,7 +8170,7 @@
                           "lValueRequested": false,
                           "memberName": "toB32",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 3315,
+                          "referencedDeclaration": 3308,
                           "src": "1682:11:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_bytes_memory_ptr_$_t_address_$returns$_t_bytes32_$",
@@ -8222,10 +8222,10 @@
                         "name": "bbs",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4441,
+                        "referencedDeclaration": 4434,
                         "src": "1670:3:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_BBStorage_$4858",
+                          "typeIdentifier": "t_contract$_BBStorage_$4851",
                           "typeString": "contract BBStorage"
                         }
                       },
@@ -8236,7 +8236,7 @@
                       "lValueRequested": false,
                       "memberName": "setUint",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4715,
+                      "referencedDeclaration": 4708,
                       "src": "1670:11:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_uint256_$returns$__$",
@@ -8286,7 +8286,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9953,
+                          "referencedDeclaration": 9946,
                           "src": "1762:3:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -8730,7 +8730,7 @@
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9940,
+                                "referencedDeclaration": 9933,
                                 "src": "3327:3:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_abi",
@@ -8777,7 +8777,7 @@
                           "name": "keccak256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9947,
+                          "referencedDeclaration": 9940,
                           "src": "3317:9:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
@@ -8812,10 +8812,10 @@
                         "name": "bbs",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4441,
+                        "referencedDeclaration": 4434,
                         "src": "3302:3:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_BBStorage_$4858",
+                          "typeIdentifier": "t_contract$_BBStorage_$4851",
                           "typeString": "contract BBStorage"
                         }
                       },
@@ -8826,7 +8826,7 @@
                       "lValueRequested": false,
                       "memberName": "getAddress",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4623,
+                      "referencedDeclaration": 4616,
                       "src": "3302:14:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_address_$",
@@ -8906,10 +8906,10 @@
                                 "name": "BBLib",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 3741,
+                                "referencedDeclaration": 3734,
                                 "src": "3427:5:3",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_type$_t_contract$_BBLib_$3741_$",
+                                  "typeIdentifier": "t_type$_t_contract$_BBLib_$3734_$",
                                   "typeString": "type(library BBLib)"
                                 }
                               },
@@ -8920,7 +8920,7 @@
                               "lValueRequested": false,
                               "memberName": "toB32",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 3229,
+                              "referencedDeclaration": 3222,
                               "src": "3427:11:3",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_function_internal_pure$_t_uint256_$returns$_t_bytes32_$",
@@ -8955,10 +8955,10 @@
                             "name": "bbs",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 4441,
+                            "referencedDeclaration": 4434,
                             "src": "3412:3:3",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_contract$_BBStorage_$4858",
+                              "typeIdentifier": "t_contract$_BBStorage_$4851",
                               "typeString": "contract BBStorage"
                             }
                           },
@@ -8969,7 +8969,7 @@
                           "lValueRequested": false,
                           "memberName": "getAddress",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 4623,
+                          "referencedDeclaration": 4616,
                           "src": "3412:14:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_address_$",
@@ -9000,7 +9000,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9953,
+                          "referencedDeclaration": 9946,
                           "src": "3450:3:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -9153,7 +9153,7 @@
                                         "name": "msg",
                                         "nodeType": "Identifier",
                                         "overloadedDeclarations": [],
-                                        "referencedDeclaration": 9953,
+                                        "referencedDeclaration": 9946,
                                         "src": "3644:3:3",
                                         "typeDescriptions": {
                                           "typeIdentifier": "t_magic_message",
@@ -9192,7 +9192,7 @@
                                       "name": "abi",
                                       "nodeType": "Identifier",
                                       "overloadedDeclarations": [],
-                                      "referencedDeclaration": 9940,
+                                      "referencedDeclaration": 9933,
                                       "src": "3621:3:3",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_magic_abi",
@@ -9239,7 +9239,7 @@
                                 "name": "keccak256",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9947,
+                                "referencedDeclaration": 9940,
                                 "src": "3611:9:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
@@ -9274,10 +9274,10 @@
                               "name": "bbs",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 4441,
+                              "referencedDeclaration": 4434,
                               "src": "3599:3:3",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_BBStorage_$4858",
+                                "typeIdentifier": "t_contract$_BBStorage_$4851",
                                 "typeString": "contract BBStorage"
                               }
                             },
@@ -9288,7 +9288,7 @@
                             "lValueRequested": false,
                             "memberName": "getUint",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 4635,
+                            "referencedDeclaration": 4628,
                             "src": "3599:11:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_uint256_$",
@@ -9378,10 +9378,10 @@
                             "name": "require",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [
-                              9956,
-                              9957
+                              9949,
+                              9950
                             ],
-                            "referencedDeclaration": 9956,
+                            "referencedDeclaration": 9949,
                             "src": "3666:7:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -9434,7 +9434,7 @@
                                     "name": "msg",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 9953,
+                                    "referencedDeclaration": 9946,
                                     "src": "3721:3:3",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_magic_message",
@@ -9495,10 +9495,10 @@
                                   "name": "BBLib",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 3741,
+                                  "referencedDeclaration": 3734,
                                   "src": "3703:5:3",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_type$_t_contract$_BBLib_$3741_$",
+                                    "typeIdentifier": "t_type$_t_contract$_BBLib_$3734_$",
                                     "typeString": "type(library BBLib)"
                                   }
                                 },
@@ -9509,7 +9509,7 @@
                                 "lValueRequested": false,
                                 "memberName": "toB32",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 3292,
+                                "referencedDeclaration": 3285,
                                 "src": "3703:11:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_address_$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -9566,10 +9566,10 @@
                               "name": "bbs",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 4441,
+                              "referencedDeclaration": 4434,
                               "src": "3691:3:3",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_BBStorage_$4858",
+                                "typeIdentifier": "t_contract$_BBStorage_$4851",
                                 "typeString": "contract BBStorage"
                               }
                             },
@@ -9580,7 +9580,7 @@
                             "lValueRequested": false,
                             "memberName": "setBool",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 4763,
+                            "referencedDeclaration": 4756,
                             "src": "3691:11:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_bool_$returns$__$",
@@ -9625,7 +9625,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 9953,
+                              "referencedDeclaration": 9946,
                               "src": "3765:3:3",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -9735,7 +9735,7 @@
                                             "name": "abi",
                                             "nodeType": "Identifier",
                                             "overloadedDeclarations": [],
-                                            "referencedDeclaration": 9940,
+                                            "referencedDeclaration": 9933,
                                             "src": "3827:3:3",
                                             "typeDescriptions": {
                                               "typeIdentifier": "t_magic_abi",
@@ -9782,7 +9782,7 @@
                                       "name": "keccak256",
                                       "nodeType": "Identifier",
                                       "overloadedDeclarations": [],
-                                      "referencedDeclaration": 9947,
+                                      "referencedDeclaration": 9940,
                                       "src": "3817:9:3",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
@@ -9839,10 +9839,10 @@
                                     "name": "bbs",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 4441,
+                                    "referencedDeclaration": 4434,
                                     "src": "3802:3:3",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_contract$_BBStorage_$4858",
+                                      "typeIdentifier": "t_contract$_BBStorage_$4851",
                                       "typeString": "contract BBStorage"
                                     }
                                   },
@@ -9853,7 +9853,7 @@
                                   "lValueRequested": false,
                                   "memberName": "setAddress",
                                   "nodeType": "MemberAccess",
-                                  "referencedDeclaration": 4699,
+                                  "referencedDeclaration": 4692,
                                   "src": "3802:14:3",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_address_$returns$__$",
@@ -9950,7 +9950,7 @@
                                       "name": "abi",
                                       "nodeType": "Identifier",
                                       "overloadedDeclarations": [],
-                                      "referencedDeclaration": 9940,
+                                      "referencedDeclaration": 9933,
                                       "src": "3519:3:3",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_magic_abi",
@@ -9997,7 +9997,7 @@
                                 "name": "keccak256",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9947,
+                                "referencedDeclaration": 9940,
                                 "src": "3509:9:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
@@ -10054,10 +10054,10 @@
                               "name": "bbs",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 4441,
+                              "referencedDeclaration": 4434,
                               "src": "3494:3:3",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_BBStorage_$4858",
+                                "typeIdentifier": "t_contract$_BBStorage_$4851",
                                 "typeString": "contract BBStorage"
                               }
                             },
@@ -10068,7 +10068,7 @@
                             "lValueRequested": false,
                             "memberName": "setAddress",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 4699,
+                            "referencedDeclaration": 4692,
                             "src": "3494:14:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_address_$returns$__$",
@@ -10152,10 +10152,10 @@
                             "name": "BBLib",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3741,
+                            "referencedDeclaration": 3734,
                             "src": "3905:5:3",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_type$_t_contract$_BBLib_$3741_$",
+                              "typeIdentifier": "t_type$_t_contract$_BBLib_$3734_$",
                               "typeString": "type(library BBLib)"
                             }
                           },
@@ -10166,7 +10166,7 @@
                           "lValueRequested": false,
                           "memberName": "toB32",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 3249,
+                          "referencedDeclaration": 3242,
                           "src": "3905:11:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -10223,10 +10223,10 @@
                         "name": "bbs",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4441,
+                        "referencedDeclaration": 4434,
                         "src": "3893:3:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_BBStorage_$4858",
+                          "typeIdentifier": "t_contract$_BBStorage_$4851",
                           "typeString": "contract BBStorage"
                         }
                       },
@@ -10237,7 +10237,7 @@
                       "lValueRequested": false,
                       "memberName": "setUint",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4715,
+                      "referencedDeclaration": 4708,
                       "src": "3893:11:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_uint256_$returns$__$",
@@ -10287,7 +10287,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9953,
+                          "referencedDeclaration": 9946,
                           "src": "3971:3:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -10531,7 +10531,7 @@
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9940,
+                                "referencedDeclaration": 9933,
                                 "src": "4311:3:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_abi",
@@ -10578,7 +10578,7 @@
                           "name": "keccak256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9947,
+                          "referencedDeclaration": 9940,
                           "src": "4301:9:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
@@ -10613,10 +10613,10 @@
                         "name": "bbs",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4441,
+                        "referencedDeclaration": 4434,
                         "src": "4289:3:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_BBStorage_$4858",
+                          "typeIdentifier": "t_contract$_BBStorage_$4851",
                           "typeString": "contract BBStorage"
                         }
                       },
@@ -10627,7 +10627,7 @@
                       "lValueRequested": false,
                       "memberName": "getUint",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4635,
+                      "referencedDeclaration": 4628,
                       "src": "4289:11:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_uint256_$",
@@ -10717,10 +10717,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9956,
-                        9957
+                        9949,
+                        9950
                       ],
-                      "referencedDeclaration": 9956,
+                      "referencedDeclaration": 9949,
                       "src": "4353:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -10815,10 +10815,10 @@
                                   "name": "BBLib",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 3741,
+                                  "referencedDeclaration": 3734,
                                   "src": "4395:5:3",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_type$_t_contract$_BBLib_$3741_$",
+                                    "typeIdentifier": "t_type$_t_contract$_BBLib_$3734_$",
                                     "typeString": "type(library BBLib)"
                                   }
                                 },
@@ -10829,7 +10829,7 @@
                                 "lValueRequested": false,
                                 "memberName": "toB32",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 3249,
+                                "referencedDeclaration": 3242,
                                 "src": "4395:11:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -10864,10 +10864,10 @@
                               "name": "bbs",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 4441,
+                              "referencedDeclaration": 4434,
                               "src": "4383:3:3",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_BBStorage_$4858",
+                                "typeIdentifier": "t_contract$_BBStorage_$4851",
                                 "typeString": "contract BBStorage"
                               }
                             },
@@ -10878,7 +10878,7 @@
                             "lValueRequested": false,
                             "memberName": "getBool",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 4671,
+                            "referencedDeclaration": 4664,
                             "src": "4383:11:3",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_view$_t_bytes32_$returns$_t_bool_$",
@@ -10937,10 +10937,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9956,
-                        9957
+                        9949,
+                        9950
                       ],
-                      "referencedDeclaration": 9956,
+                      "referencedDeclaration": 9949,
                       "src": "4375:7:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -11344,7 +11344,7 @@
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9940,
+                                "referencedDeclaration": 9933,
                                 "src": "4752:3:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_abi",
@@ -11391,7 +11391,7 @@
                           "name": "keccak256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9947,
+                          "referencedDeclaration": 9940,
                           "src": "4742:9:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
@@ -11443,10 +11443,10 @@
                         "name": "bbs",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4441,
+                        "referencedDeclaration": 4434,
                         "src": "4727:3:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_BBStorage_$4858",
+                          "typeIdentifier": "t_contract$_BBStorage_$4851",
                           "typeString": "contract BBStorage"
                         }
                       },
@@ -11457,7 +11457,7 @@
                       "lValueRequested": false,
                       "memberName": "setAddress",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4699,
+                      "referencedDeclaration": 4692,
                       "src": "4727:14:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_address_$returns$__$",
@@ -11541,7 +11541,7 @@
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9940,
+                                "referencedDeclaration": 9933,
                                 "src": "4830:3:3",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_abi",
@@ -11588,7 +11588,7 @@
                           "name": "keccak256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9947,
+                          "referencedDeclaration": 9940,
                           "src": "4820:9:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
@@ -11640,10 +11640,10 @@
                         "name": "bbs",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4441,
+                        "referencedDeclaration": 4434,
                         "src": "4808:3:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_BBStorage_$4858",
+                          "typeIdentifier": "t_contract$_BBStorage_$4851",
                           "typeString": "contract BBStorage"
                         }
                       },
@@ -11654,7 +11654,7 @@
                       "lValueRequested": false,
                       "memberName": "setUint",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4715,
+                      "referencedDeclaration": 4708,
                       "src": "4808:11:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_uint256_$returns$__$",
@@ -11735,10 +11735,10 @@
                             "name": "BBLib",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 3741,
+                            "referencedDeclaration": 3734,
                             "src": "4903:5:3",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_type$_t_contract$_BBLib_$3741_$",
+                              "typeIdentifier": "t_type$_t_contract$_BBLib_$3734_$",
                               "typeString": "type(library BBLib)"
                             }
                           },
@@ -11749,7 +11749,7 @@
                           "lValueRequested": false,
                           "memberName": "toB32",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 3249,
+                          "referencedDeclaration": 3242,
                           "src": "4903:11:3",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_internal_pure$_t_uint256_$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -11806,10 +11806,10 @@
                         "name": "bbs",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4441,
+                        "referencedDeclaration": 4434,
                         "src": "4891:3:3",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_BBStorage_$4858",
+                          "typeIdentifier": "t_contract$_BBStorage_$4851",
                           "typeString": "contract BBStorage"
                         }
                       },
@@ -11820,7 +11820,7 @@
                       "lValueRequested": false,
                       "memberName": "setUint",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4715,
+                      "referencedDeclaration": 4708,
                       "src": "4891:11:3",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_uint256_$returns$__$",
@@ -12078,115 +12078,7 @@
     "name": "solc",
     "version": "0.4.24+commit.e67f0147.Emscripten.clang"
   },
-  "networks": {
-    "4": {
-      "events": {
-        "0xf912dbe437ca5ac4217d0052764fe3e02be5bc418e6328346d4dfd8c3d493c8a": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "jobID",
-              "type": "uint256"
-            },
-            {
-              "indexed": true,
-              "name": "owner",
-              "type": "address"
-            },
-            {
-              "indexed": false,
-              "name": "ownerID",
-              "type": "uint256"
-            },
-            {
-              "indexed": false,
-              "name": "bid",
-              "type": "uint256"
-            },
-            {
-              "indexed": false,
-              "name": "bidTime",
-              "type": "uint256"
-            }
-          ],
-          "name": "BidCreated",
-          "type": "event"
-        },
-        "0x3870eb7429efb5d4c9fb8dd66016382c01ef7bb17f317e6feb30e37ce878b1fb": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "jobID",
-              "type": "uint256"
-            },
-            {
-              "indexed": true,
-              "name": "owner",
-              "type": "address"
-            }
-          ],
-          "name": "BidCanceled",
-          "type": "event"
-        },
-        "0x8a1d92bfdb091522c5b1140f77418445f2b0df2a7dd6cb11b76d59894e530c61": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "jobID",
-              "type": "uint256"
-            },
-            {
-              "indexed": false,
-              "name": "bid",
-              "type": "uint256"
-            },
-            {
-              "indexed": true,
-              "name": "freelancerID",
-              "type": "uint256"
-            }
-          ],
-          "name": "BidAccepted",
-          "type": "event"
-        },
-        "0xf8df31144d9c2f0f6b59d69b8b98abd5459d07f2742c4df920b25aae33c64820": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipRenounced",
-          "type": "event"
-        },
-        "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": {
-          "anonymous": false,
-          "inputs": [
-            {
-              "indexed": true,
-              "name": "previousOwner",
-              "type": "address"
-            },
-            {
-              "indexed": true,
-              "name": "newOwner",
-              "type": "address"
-            }
-          ],
-          "name": "OwnershipTransferred",
-          "type": "event"
-        }
-      },
-      "links": {},
-      "address": "0xae4dbb0ca7568fc1136a77a6dd0da5bd65acae0e",
-      "transactionHash": "0x5694171e42fbcb4760d406e4e38402d67773a8f03a0df1dfcb3444743ab45f3f"
-    }
-  },
+  "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-12-13T06:51:42.898Z"
+  "updatedAt": "2018-12-20T07:35:09.093Z"
 }

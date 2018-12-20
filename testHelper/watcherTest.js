@@ -1,7 +1,7 @@
 const Web3 = require('web3')
-const contract_abi = require('./config')
+const contract_abi = require('../src/config')
 
-const watcher = require('./watcher')
+const watcher = require('../src/watcher')
 
 
 

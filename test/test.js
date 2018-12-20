@@ -2,12 +2,12 @@ const assert = require('assert');
 const Web3 = require('web3')
 const contract_abi = require('../src/config')
 var fs = require('fs');
-const watcherTest = require('../src/watcherTest')
+const watcherTest = require('../testHelper/watcherTest')
 
 var web3 = null;
 var dataJson = null;
 var accounts = [];
-
+var bboAddress = ''
 
 describe('Unit Test', async function () {
     this.timeout(0);
@@ -49,16 +49,28 @@ describe('Unit Test', async function () {
         assert(data.value, lastBlock.returnValues.value);
     });
 
-    var jobHash = '';
+    var jobHash1 = '';
+    var jobHash2 = '';
+    var jobHash3 = '';
+    var jobID_0;
+    var jobID_1;
+    var jobID_2;
 
     it('Job create', async function() {
         const jobContract = await new web3.eth.Contract(contract_abi.json.BBFreelancerJob.abi, dataJson.JOB.address, {
             from: accounts[0]
         });
-        jobHash = web3.utils.toHex('jobHash1');
+        jobHash1 = web3.utils.toHex('jobHash1');
+        jobHash2 = web3.utils.toHex('jobHash2');
+        jobHash3 = web3.utils.toHex('jobHash3');
+
         var expiredTime = parseInt(Date.now() / 1000) + 7 * 24 * 3600; // expired after 7 days
         var timeBid = 3 * 24 * 3600;
-        await jobContract.methods.createJob(jobHash, expiredTime, timeBid, web3.utils.toWei('100', 'ether'), web3.utils.toHex('top')).send({from : accounts[0]});
+        let l = await jobContract.methods.createJob(jobHash1, expiredTime, timeBid, web3.utils.toWei('100', 'ether'), web3.utils.toHex('top')).send({from : accounts[0]});
+        jobID_0 =  l.events.JobCreated.returnValues.jobID;
+        l = await jobContract.methods.createJob(jobHash2, expiredTime, timeBid, web3.utils.toWei('11', 'ether'), web3.utils.toHex('top')).send({from : accounts[0]});
+        jobID_1 =  l.events.JobCreated.returnValues.jobID;
+
 
         let data = await watcherTest.getLatestBlockNumber('BBFreelancerJob','JobCreated');
 
@@ -70,6 +82,110 @@ describe('Unit Test', async function () {
 
     });
 
-   
+    it('Bid Create', async function() {
+       
+        const bidContract = await new web3.eth.Contract(contract_abi.json.BBFreelancerBid.abi, dataJson.BID.address, {
+            from: accounts[0]
+        });
+        let timeDone = 3 * 24 * 3600;
+        let userID = 1777;
+        await bidContract.methods.createBid(userID, jobID_0,  '999', timeDone).send({from : accounts[1]});
+        await bidContract.methods.createBid(userID, jobID_1,  '888', timeDone).send({from : accounts[1]});
+        
+        let data = await watcherTest.getLatestBlockNumber('BBFreelancerBid','BidCreated');
+        let result = await watcherTest.getDataOnNetWork('BBFreelancerBid','BidCreated',dataJson.BID.address, data.blockNumber);
+
+        let lastBlock = result[result.length - 1];
+        
+        assert(data.jobID, lastBlock.returnValues.jobID);
+
+    });
+
+    it('Bid acceptBid', async function() {
+       
+        const bidContract = await new web3.eth.Contract(contract_abi.json.BBFreelancerBid.abi, dataJson.BID.address, {
+            from: accounts[0]
+        });
+        
+        await bidContract.methods.acceptBid(1777,jobID_0, accounts[1]).send({from : accounts[0]});
+        await bidContract.methods.acceptBid(1777,jobID_1, accounts[1]).send({from : accounts[0]});
+        
+        let data = await watcherTest.getLatestBlockNumber('BBFreelancerBid','BidAccepted');
+        let result = await watcherTest.getDataOnNetWork('BBFreelancerBid','BidAccepted',dataJson.BID.address, data.blockNumber);
+
+        let lastBlock = result[result.length - 1];
+        
+        assert(data.jobID, lastBlock.returnValues.jobID);
+
+    });
+
+    it('Bid cancelBid', async function() {
+       
+        const bidContract = await new web3.eth.Contract(contract_abi.json.BBFreelancerBid.abi, dataJson.BID.address, {
+            from: accounts[0]
+        });
+        
+        await bidContract.methods.cancelBid(jobID_1).send({from : accounts[0]});
+        await bidContract.methods.acceptBid(1777,jobID_0, accounts[1]).send({from : accounts[0]});
+        
+        let data = await watcherTest.getLatestBlockNumber('BBFreelancerBid','BidCanceled');
+        let result = await watcherTest.getDataOnNetWork('BBFreelancerBid','BidCanceled',dataJson.BID.address, data.blockNumber);
+
+        let lastBlock = result[result.length - 1];
+        
+        assert(data.jobID, lastBlock.returnValues.jobID);
+
+    });
+
+    it('Job Cancel', async function() {
+        const jobContract = await new web3.eth.Contract(contract_abi.json.BBFreelancerJob.abi, dataJson.JOB.address, {
+            from: accounts[0]
+        });
+        var expiredTime = parseInt(Date.now() / 1000) + 7 * 24 * 3600; // expired after 7 days
+        var timeBid = 3 * 24 * 3600;
+        let l = await jobContract.methods.createJob(jobHash3, expiredTime, timeBid, web3.utils.toWei('100', 'ether'), web3.utils.toHex('top')).send({from : accounts[0]});
+        let jobID = l.events.JobCreated.returnValues.jobID;
+        await jobContract.methods.cancelJob(jobID).send({from : accounts[0]});
+
+        let data = await watcherTest.getLatestBlockNumber('BBFreelancerJob','JobCanceled');
+        let result = await watcherTest.getDataOnNetWork('BBFreelancerJob','JobCanceled',dataJson.JOB.address, data.blockNumber);
+
+        let lastBlock = result[result.length - 1];
+        
+        assert(data.jobID, lastBlock.returnValues.jobID);
+
+    });
+
+    it('Job Start', async function() {
+        const jobContract = await new web3.eth.Contract(contract_abi.json.BBFreelancerJob.abi, dataJson.JOB.address, {
+            from: accounts[0]
+        });
+       
+        await jobContract.methods.startJob(jobID_0).send({from : accounts[1]});
+
+        let data = await watcherTest.getLatestBlockNumber('BBFreelancerJob','JobStarted');
+        let result = await watcherTest.getDataOnNetWork('BBFreelancerJob','JobStarted',dataJson.JOB.address, data.blockNumber);
+
+        let lastBlock = result[result.length - 1];
+        
+        assert(data.jobID, lastBlock.returnValues.jobID);
+
+    });
+
+    it('Job Finish', async function() {
+        const jobContract = await new web3.eth.Contract(contract_abi.json.BBFreelancerJob.abi, dataJson.JOB.address, {
+            from: accounts[0]
+        });
+       
+        await jobContract.methods.finishJob(jobID_0).send({from : accounts[1]});
+
+        let data = await watcherTest.getLatestBlockNumber('BBFreelancerJob','JobFinished');
+        let result = await watcherTest.getDataOnNetWork('BBFreelancerJob','JobFinished',dataJson.JOB.address, data.blockNumber);
+
+        let lastBlock = result[result.length - 1];
+        
+        assert(data.jobID, lastBlock.returnValues.jobID);
+
+    });
 
 });

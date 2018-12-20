@@ -207,7 +207,7 @@
         "id": 1200,
         "nodeType": "ImportDirective",
         "scope": 1251,
-        "sourceUnit": 4519,
+        "sourceUnit": 4512,
         "src": "27:26:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -221,10 +221,10 @@
               "id": 1201,
               "name": "BBStandard",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 4518,
+              "referencedDeclaration": 4511,
               "src": "81:10:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_BBStandard_$4518",
+                "typeIdentifier": "t_contract$_BBStandard_$4511",
                 "typeString": "contract BBStandard"
               }
             },
@@ -234,8 +234,8 @@
           }
         ],
         "contractDependencies": [
-          4518,
-          9072
+          4511,
+          9065
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -243,8 +243,8 @@
         "id": 1250,
         "linearizedBaseContracts": [
           1250,
-          4518,
-          9072
+          4511,
+          9065
         ],
         "name": "BBExpertHash",
         "nodeType": "ContractDefinition",
@@ -374,7 +374,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 9953,
+                            "referencedDeclaration": 9946,
                             "src": "240:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -433,10 +433,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9956,
-                        9957
+                        9949,
+                        9950
                       ],
-                      "referencedDeclaration": 9956,
+                      "referencedDeclaration": 9949,
                       "src": "232:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -497,7 +497,7 @@
                                   "name": "msg",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 9953,
+                                  "referencedDeclaration": 9946,
                                   "src": "317:3:1",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_magic_message",
@@ -536,7 +536,7 @@
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9940,
+                                "referencedDeclaration": 9933,
                                 "src": "287:3:1",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_abi",
@@ -583,7 +583,7 @@
                           "name": "keccak256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9947,
+                          "referencedDeclaration": 9940,
                           "src": "277:9:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
@@ -635,10 +635,10 @@
                         "name": "bbs",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4441,
+                        "referencedDeclaration": 4434,
                         "src": "263:3:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_BBStorage_$4858",
+                          "typeIdentifier": "t_contract$_BBStorage_$4851",
                           "typeString": "contract BBStorage"
                         }
                       },
@@ -649,7 +649,7 @@
                       "lValueRequested": false,
                       "memberName": "setBytes",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4747,
+                      "referencedDeclaration": 4740,
                       "src": "263:12:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_bytes_memory_ptr_$returns$__$",
@@ -686,7 +686,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9953,
+                          "referencedDeclaration": 9946,
                           "src": "366:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -740,7 +740,7 @@
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9940,
+                                "referencedDeclaration": 9933,
                                 "src": "388:3:1",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_abi",
@@ -787,7 +787,7 @@
                           "name": "keccak256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9947,
+                          "referencedDeclaration": 9940,
                           "src": "378:9:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
@@ -956,7 +956,7 @@
         "id": 1200,
         "nodeType": "ImportDirective",
         "scope": 1251,
-        "sourceUnit": 4519,
+        "sourceUnit": 4512,
         "src": "27:26:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -970,10 +970,10 @@
               "id": 1201,
               "name": "BBStandard",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 4518,
+              "referencedDeclaration": 4511,
               "src": "81:10:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_BBStandard_$4518",
+                "typeIdentifier": "t_contract$_BBStandard_$4511",
                 "typeString": "contract BBStandard"
               }
             },
@@ -983,8 +983,8 @@
           }
         ],
         "contractDependencies": [
-          4518,
-          9072
+          4511,
+          9065
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -992,8 +992,8 @@
         "id": 1250,
         "linearizedBaseContracts": [
           1250,
-          4518,
-          9072
+          4511,
+          9065
         ],
         "name": "BBExpertHash",
         "nodeType": "ContractDefinition",
@@ -1123,7 +1123,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 9953,
+                            "referencedDeclaration": 9946,
                             "src": "240:3:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -1182,10 +1182,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9956,
-                        9957
+                        9949,
+                        9950
                       ],
-                      "referencedDeclaration": 9956,
+                      "referencedDeclaration": 9949,
                       "src": "232:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -1246,7 +1246,7 @@
                                   "name": "msg",
                                   "nodeType": "Identifier",
                                   "overloadedDeclarations": [],
-                                  "referencedDeclaration": 9953,
+                                  "referencedDeclaration": 9946,
                                   "src": "317:3:1",
                                   "typeDescriptions": {
                                     "typeIdentifier": "t_magic_message",
@@ -1285,7 +1285,7 @@
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9940,
+                                "referencedDeclaration": 9933,
                                 "src": "287:3:1",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_abi",
@@ -1332,7 +1332,7 @@
                           "name": "keccak256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9947,
+                          "referencedDeclaration": 9940,
                           "src": "277:9:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
@@ -1384,10 +1384,10 @@
                         "name": "bbs",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 4441,
+                        "referencedDeclaration": 4434,
                         "src": "263:3:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_BBStorage_$4858",
+                          "typeIdentifier": "t_contract$_BBStorage_$4851",
                           "typeString": "contract BBStorage"
                         }
                       },
@@ -1398,7 +1398,7 @@
                       "lValueRequested": false,
                       "memberName": "setBytes",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 4747,
+                      "referencedDeclaration": 4740,
                       "src": "263:12:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_bytes32_$_t_bytes_memory_ptr_$returns$__$",
@@ -1435,7 +1435,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9953,
+                          "referencedDeclaration": 9946,
                           "src": "366:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -1489,7 +1489,7 @@
                                 "name": "abi",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9940,
+                                "referencedDeclaration": 9933,
                                 "src": "388:3:1",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_abi",
@@ -1536,7 +1536,7 @@
                           "name": "keccak256",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 9947,
+                          "referencedDeclaration": 9940,
                           "src": "378:9:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_function_sha3_pure$__$returns$_t_bytes32_$",
@@ -1684,5 +1684,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-12-13T06:49:01.403Z"
+  "updatedAt": "2018-12-20T07:35:09.091Z"
 }

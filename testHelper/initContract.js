@@ -1,5 +1,5 @@
 const Web3 = require('web3')
-const contract_abi = require('./config')
+const contract_abi = require('../src/config')
 const watcherTest = require('./watcherTest')
 var fs = require('fs');
 
@@ -29,9 +29,7 @@ var fs = require('fs');
     let proxyFact = await watcherTest.deployContract(ProxyFactory.abi, ProxyFactory.bytecode);
     console.log('proxyFact address', proxyFact.address);
 
-    const proxyFactContract = await new web3.eth.Contract(ProxyFactory.abi, proxyFact.address, {
-        from: accounts[0]
-        });
+    const proxyFactContract = await new web3.eth.Contract(ProxyFactory.abi, proxyFact.address, {from: accounts[0]});
 
     let l =  await proxyFactContract.methods.createProxy(accounts[8], jobInstance.address).send({from: accounts[0]});
     let  proxyAddressJob =  l.events.ProxyCreated.returnValues.proxy
@@ -54,6 +52,13 @@ var fs = require('fs');
     });
     await jobContract.methods.transferOwnership(accounts[0]).send({from: accounts[0]});
     await jobContract.methods.setStorage(storage.address).send({from: accounts[0]});
+
+    const bidContract = await new web3.eth.Contract(Bid.abi, proxyAddressBid, {
+        from: accounts[0]
+    });
+    await bidContract.methods.transferOwnership(accounts[0]).send({from: accounts[0]});
+    await bidContract.methods.setStorage(storage.address).send({from: accounts[0]});
+
 
     let obj = new Object();
     obj.BBOTest = {address : bbo.address, events : ['Transfer']};

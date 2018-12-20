@@ -22,11 +22,21 @@ start = async () => {
         if(result.JOB) {
             let obj = result.JOB;
             for(let i = 0; i < obj.events.length; i++) {
-                console.log('Starting watching eventName ' + obj.events[i] + ' from BBOTest')
+                console.log('Starting watching eventName ' + obj.events[i] + ' from BBFreelancerJob')
                 watcherTest.watchEvent('BBFreelancerJob', obj.events[i], obj.address);
 
             }
         }
+
+        if(result.BID) {
+            let obj = result.BID;
+            for(let i = 0; i < obj.events.length; i++) {
+                console.log('Starting watching eventName ' + obj.events[i] + ' from BBFreelancerBid')
+                watcherTest.watchEvent('BBFreelancerBid', obj.events[i], obj.address);
+
+            }
+        }
+
 
     });
 }
