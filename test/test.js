@@ -49,6 +49,27 @@ describe('Unit Test', async function () {
         assert(data.value, lastBlock.returnValues.value);
     });
 
+    var jobHash = '';
+
+    it('Job create', async function() {
+        const jobContract = await new web3.eth.Contract(contract_abi.json.BBFreelancerJob.abi, dataJson.JOB.address, {
+            from: accounts[0]
+        });
+        jobHash = web3.utils.toHex('jobHash1');
+        var expiredTime = parseInt(Date.now() / 1000) + 7 * 24 * 3600; // expired after 7 days
+        var timeBid = 3 * 24 * 3600;
+        await jobContract.methods.createJob(jobHash, expiredTime, timeBid, web3.utils.toWei('100', 'ether'), web3.utils.toHex('top')).send({from : accounts[0]});
+
+        let data = await watcherTest.getLatestBlockNumber('BBFreelancerJob','JobCreated');
+
+        let result = await watcherTest.getDataOnNetWork('BBFreelancerJob','JobCreated',dataJson.JOB.address, data.blockNumber);
+
+        let lastBlock = result[result.length - 1];
+        
+        assert(data.jobID, lastBlock.returnValues.jobID);
+
+    });
+
    
 
 });

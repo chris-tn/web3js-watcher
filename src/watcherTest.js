@@ -24,7 +24,7 @@ watchEvent = (contractName, eventName, address) => {
       if(error) {
         console.log('error', error);
       } else {
-        cconsole.log(contractName + ' ' + eventName + ' at ' + new Date() + ' txHash -> ' + event.returnValues.txHash); 
+        console.log(contractName + ' ' + eventName + ' at ' + new Date() + ' txHash -> ' + event.transactionHash); 
       }
   })
   .on('data', function(event){
