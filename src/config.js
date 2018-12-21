@@ -20,7 +20,10 @@ module.exports =  {
 		BBRating : BBRating_json,
 		BBVotingHelper : BBVotingHelper_json,
 		BBStorage : BBStorage_json,
-		ProxyFactory : ProxyFactory_json
+		ProxyFactory : ProxyFactory_json,
+		BBParams : BBParams_json,
+		BBVoting : BBVoting_json,
+		BBDispute : BBDispute_json,
 	},
 	ropsten :  {
 		BBO : {

@@ -12,7 +12,9 @@ var fs = require('fs');
     let Storage = contract_abi.json.BBStorage;
     let Job = contract_abi.json.BBFreelancerJob;
     let Bid = contract_abi.json.BBFreelancerBid;
-    let ProxyFactory = contract_abi.json.ProxyFactory;    
+    let Rating = contract_abi.json.BBRating;
+    let ProxyFactory = contract_abi.json.ProxyFactory;
+    let Payment = contract_abi.json.BBFreelancerPayment;    
     
     let bbo = await watcherTest.deployContract(BBOTest.abi, BBOTest.bytecode);
     console.log('BBO address',bbo.address);
@@ -25,6 +27,12 @@ var fs = require('fs');
     
     let bidInstance = await watcherTest.deployContract(Bid.abi, Bid.bytecode);
     console.log('bidInstance address', bidInstance.address);
+
+    let ratingInstance = await watcherTest.deployContract(Rating.abi, Rating.bytecode);
+    console.log('ratingInstance address', ratingInstance.address);
+
+    let paymentInstance = await watcherTest.deployContract(Payment.abi, Payment.bytecode);
+    console.log('ratingInstance address', ratingInstance.address);
     
     let proxyFact = await watcherTest.deployContract(ProxyFactory.abi, ProxyFactory.bytecode);
     console.log('proxyFact address', proxyFact.address);
@@ -39,13 +47,28 @@ var fs = require('fs');
     let  proxyAddressBid =  l.events.ProxyCreated.returnValues.proxy
     console.log('proxyAddressBid', proxyAddressBid);
 
+    l =  await proxyFactContract.methods.createProxy(accounts[8], ratingInstance.address).send({from: accounts[0]});
+    let  proxyAddressRating=  l.events.ProxyCreated.returnValues.proxy
+    console.log('proxyAddressRating', proxyAddressRating);
+
+    l =  await proxyFactContract.methods.createProxy(accounts[8], paymentInstance.address).send({from: accounts[0]});
+    let  proxyAddressPayment=  l.events.ProxyCreated.returnValues.proxy
+    console.log('proxyAddressPayment', proxyAddressPayment);
+
     const storageContract = await new web3.eth.Contract(Storage.abi, storage.address, {
         from: accounts[0]
         });
 
     await storageContract.methods.addAdmin(proxyAddressJob, true).send({from: accounts[0]});
     await storageContract.methods.addAdmin(proxyAddressBid, true).send({from: accounts[0]});    
+    await storageContract.methods.addAdmin(proxyAddressRating, true).send({from: accounts[0]});
+    await storageContract.methods.addAdmin(proxyAddressPayment, true).send({from: accounts[0]});
     
+    const paymentContract = await new web3.eth.Contract(Payment.abi, proxyAddressPayment, {
+        from: accounts[0]
+    });
+    await paymentContract.methods.transferOwnership(accounts[0]).send({from: accounts[0]});
+    await paymentContract.methods.setStorage(storage.address).send({from: accounts[0]});
     
     const jobContract = await new web3.eth.Contract(Job.abi, proxyAddressJob, {
         from: accounts[0]
@@ -59,11 +82,19 @@ var fs = require('fs');
     await bidContract.methods.transferOwnership(accounts[0]).send({from: accounts[0]});
     await bidContract.methods.setStorage(storage.address).send({from: accounts[0]});
 
+    const ratingContract = await new web3.eth.Contract(Rating.abi, proxyAddressRating, {
+        from: accounts[0]
+    });
+    await ratingContract.methods.transferOwnership(accounts[0]).send({from: accounts[0]});
+    await ratingContract.methods.setStorage(storage.address).send({from: accounts[0]});
 
     let obj = new Object();
     obj.BBOTest = {address : bbo.address, events : ['Transfer']};
     obj.JOB = {address : proxyAddressJob, events : ['JobCreated','JobCanceled','JobStarted','JobFinished']};
     obj.BID = {address : proxyAddressBid, events : ['BidCreated','BidCanceled','BidAccepted']};
+    obj.RATING = {address : proxyAddressRating, events : ['Rating']};
+    obj.PAYMENT = {address : proxyAddressPayment, events : ['PaymentClaimed','PaymentAccepted','PaymentRejected','DisputeFinalized','DepositMoney']};
+
 
     var json = JSON.stringify(obj);
     fs.writeFile('./test/contractAddress.json', json, 'utf8', function(err) {

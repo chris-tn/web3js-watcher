@@ -37,6 +37,23 @@ start = async () => {
             }
         }
 
+        if(result.RATING) {
+            let obj = result.RATING;
+            for(let i = 0; i < obj.events.length; i++) {
+                console.log('Starting watching eventName ' + obj.events[i] + ' from BBRating')
+                watcherTest.watchEvent('BBRating', obj.events[i], obj.address);
+
+            }
+        }
+
+        if(result.PAYMENT) {
+            let obj = result.PAYMENT;
+            for(let i = 0; i < obj.events.length; i++) {
+                console.log('Starting watching eventName ' + obj.events[i] + ' from BBFreelancerPayment')
+                watcherTest.watchEvent('BBFreelancerPayment', obj.events[i], obj.address);
+
+            }
+        }
 
     });
 }
