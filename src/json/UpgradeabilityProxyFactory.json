@@ -74,14 +74,14 @@
     "absolutePath": "/Users/trantho/Code/SmartContract/digital-contracts/src/contracts/zos-lib/upgradeability/UpgradeabilityProxyFactory.sol",
     "exportedSymbols": {
       "UpgradeabilityProxyFactory": [
-        9931
+        9812
       ]
     },
-    "id": 9932,
+    "id": 9813,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 9841,
+        "id": 9722,
         "literals": [
           "solidity",
           "^",
@@ -94,10 +94,10 @@
       {
         "absolutePath": "/Users/trantho/Code/SmartContract/digital-contracts/src/contracts/zos-lib/upgradeability/AdminUpgradeabilityProxy.sol",
         "file": "./AdminUpgradeabilityProxy.sol",
-        "id": 9842,
+        "id": 9723,
         "nodeType": "ImportDirective",
-        "scope": 9932,
-        "sourceUnit": 9726,
+        "scope": 9813,
+        "sourceUnit": 9607,
         "src": "26:40:31",
         "symbolAliases": [],
         "unitAlias": ""
@@ -105,14 +105,14 @@
       {
         "baseContracts": [],
         "contractDependencies": [
-          9725
+          9606
         ],
         "contractKind": "contract",
         "documentation": "@title UpgradeabilityProxyFactory\n@dev Factory to create upgradeability proxies.",
         "fullyImplemented": true,
-        "id": 9931,
+        "id": 9812,
         "linearizedBaseContracts": [
-          9931
+          9812
         ],
         "name": "UpgradeabilityProxyFactory",
         "nodeType": "ContractDefinition",
@@ -120,20 +120,20 @@
           {
             "anonymous": false,
             "documentation": "@dev Emitted when a new proxy is created.\n@param proxy Address of the created proxy.",
-            "id": 9846,
+            "id": 9727,
             "name": "ProxyCreated",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 9845,
+              "id": 9726,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9844,
+                  "id": 9725,
                   "indexed": false,
                   "name": "proxy",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9846,
+                  "scope": 9727,
                   "src": "329:13:31",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -142,7 +142,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9843,
+                    "id": 9724,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "329:7:31",
@@ -161,37 +161,37 @@
           },
           {
             "body": {
-              "id": 9869,
+              "id": 9750,
               "nodeType": "Block",
               "src": "687:120:31",
               "statements": [
                 {
                   "assignments": [
-                    9856
+                    9737
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 9856,
+                      "id": 9737,
                       "name": "proxy",
                       "nodeType": "VariableDeclaration",
-                      "scope": 9870,
+                      "scope": 9751,
                       "src": "693:30:31",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                        "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                         "typeString": "contract AdminUpgradeabilityProxy"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 9855,
+                        "id": 9736,
                         "name": "AdminUpgradeabilityProxy",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 9725,
+                        "referencedDeclaration": 9606,
                         "src": "693:24:31",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                           "typeString": "contract AdminUpgradeabilityProxy"
                         }
                       },
@@ -199,17 +199,17 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 9860,
+                  "id": 9741,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 9858,
+                        "id": 9739,
                         "name": "implementation",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9850,
+                        "referencedDeclaration": 9731,
                         "src": "739:14:31",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -224,18 +224,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 9857,
+                      "id": 9738,
                       "name": "_createProxy",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9930,
+                      "referencedDeclaration": 9811,
                       "src": "726:12:31",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$_t_contract$_AdminUpgradeabilityProxy_$9725_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$_t_contract$_AdminUpgradeabilityProxy_$9606_$",
                         "typeString": "function (address) returns (contract AdminUpgradeabilityProxy)"
                       }
                     },
-                    "id": 9859,
+                    "id": 9740,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -245,7 +245,7 @@
                     "nodeType": "FunctionCall",
                     "src": "726:28:31",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                       "typeString": "contract AdminUpgradeabilityProxy"
                     }
                   },
@@ -258,11 +258,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 9864,
+                        "id": 9745,
                         "name": "admin",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9848,
+                        "referencedDeclaration": 9729,
                         "src": "778:5:31",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -279,32 +279,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 9861,
+                        "id": 9742,
                         "name": "proxy",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9856,
+                        "referencedDeclaration": 9737,
                         "src": "760:5:31",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                           "typeString": "contract AdminUpgradeabilityProxy"
                         }
                       },
-                      "id": 9863,
+                      "id": 9744,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "changeAdmin",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 9645,
+                      "referencedDeclaration": 9526,
                       "src": "760:17:31",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address) external"
                       }
                     },
-                    "id": 9865,
+                    "id": 9746,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -318,33 +318,33 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 9866,
+                  "id": 9747,
                   "nodeType": "ExpressionStatement",
                   "src": "760:24:31"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 9867,
+                    "id": 9748,
                     "name": "proxy",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 9856,
+                    "referencedDeclaration": 9737,
                     "src": "797:5:31",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                       "typeString": "contract AdminUpgradeabilityProxy"
                     }
                   },
-                  "functionReturnParameters": 9854,
-                  "id": 9868,
+                  "functionReturnParameters": 9735,
+                  "id": 9749,
                   "nodeType": "Return",
                   "src": "790:12:31"
                 }
               ]
             },
             "documentation": "@dev Creates an upgradeability proxy with an initial implementation.\n@param admin Address of the proxy admin.\n@param implementation Address of the initial implementation.\n@return Address of the new proxy.",
-            "id": 9870,
+            "id": 9751,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -352,15 +352,15 @@
             "name": "createProxy",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9851,
+              "id": 9732,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9848,
+                  "id": 9729,
                   "name": "admin",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9870,
+                  "scope": 9751,
                   "src": "606:13:31",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -369,7 +369,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9847,
+                    "id": 9728,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "606:7:31",
@@ -383,10 +383,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 9850,
+                  "id": 9731,
                   "name": "implementation",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9870,
+                  "scope": 9751,
                   "src": "621:22:31",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -395,7 +395,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9849,
+                    "id": 9730,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "621:7:31",
@@ -412,31 +412,31 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 9854,
+              "id": 9735,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9853,
+                  "id": 9734,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9870,
+                  "scope": 9751,
                   "src": "661:24:31",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                    "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                     "typeString": "contract AdminUpgradeabilityProxy"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 9852,
+                    "id": 9733,
                     "name": "AdminUpgradeabilityProxy",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 9725,
+                    "referencedDeclaration": 9606,
                     "src": "661:24:31",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                       "typeString": "contract AdminUpgradeabilityProxy"
                     }
                   },
@@ -446,7 +446,7 @@
               ],
               "src": "660:26:31"
             },
-            "scope": 9931,
+            "scope": 9812,
             "src": "585:222:31",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -454,37 +454,37 @@
           },
           {
             "body": {
-              "id": 9908,
+              "id": 9789,
               "nodeType": "Block",
               "src": "1521:177:31",
               "statements": [
                 {
                   "assignments": [
-                    9882
+                    9763
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 9882,
+                      "id": 9763,
                       "name": "proxy",
                       "nodeType": "VariableDeclaration",
-                      "scope": 9909,
+                      "scope": 9790,
                       "src": "1527:30:31",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                        "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                         "typeString": "contract AdminUpgradeabilityProxy"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 9881,
+                        "id": 9762,
                         "name": "AdminUpgradeabilityProxy",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 9725,
+                        "referencedDeclaration": 9606,
                         "src": "1527:24:31",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                           "typeString": "contract AdminUpgradeabilityProxy"
                         }
                       },
@@ -492,17 +492,17 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 9886,
+                  "id": 9767,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 9884,
+                        "id": 9765,
                         "name": "implementation",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9874,
+                        "referencedDeclaration": 9755,
                         "src": "1573:14:31",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -517,18 +517,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 9883,
+                      "id": 9764,
                       "name": "_createProxy",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9930,
+                      "referencedDeclaration": 9811,
                       "src": "1560:12:31",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$_t_contract$_AdminUpgradeabilityProxy_$9725_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$_t_contract$_AdminUpgradeabilityProxy_$9606_$",
                         "typeString": "function (address) returns (contract AdminUpgradeabilityProxy)"
                       }
                     },
-                    "id": 9885,
+                    "id": 9766,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -538,7 +538,7 @@
                     "nodeType": "FunctionCall",
                     "src": "1560:28:31",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                       "typeString": "contract AdminUpgradeabilityProxy"
                     }
                   },
@@ -551,11 +551,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 9890,
+                        "id": 9771,
                         "name": "admin",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9872,
+                        "referencedDeclaration": 9753,
                         "src": "1612:5:31",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -572,32 +572,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 9887,
+                        "id": 9768,
                         "name": "proxy",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9882,
+                        "referencedDeclaration": 9763,
                         "src": "1594:5:31",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                           "typeString": "contract AdminUpgradeabilityProxy"
                         }
                       },
-                      "id": 9889,
+                      "id": 9770,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "changeAdmin",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 9645,
+                      "referencedDeclaration": 9526,
                       "src": "1594:17:31",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address) external"
                       }
                     },
-                    "id": 9891,
+                    "id": 9772,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -611,7 +611,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 9892,
+                  "id": 9773,
                   "nodeType": "ExpressionStatement",
                   "src": "1594:24:31"
                 },
@@ -624,11 +624,11 @@
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 9902,
+                            "id": 9783,
                             "name": "data",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 9876,
+                            "referencedDeclaration": 9757,
                             "src": "1669:4:31",
                             "typeDescriptions": {
                               "typeIdentifier": "t_bytes_memory_ptr",
@@ -648,18 +648,18 @@
                               "argumentTypes": null,
                               "expression": {
                                 "argumentTypes": null,
-                                "id": 9899,
+                                "id": 9780,
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9946,
+                                "referencedDeclaration": 9827,
                                 "src": "1658:3:31",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
                                   "typeString": "msg"
                                 }
                               },
-                              "id": 9900,
+                              "id": 9781,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -688,14 +688,14 @@
                                 "arguments": [
                                   {
                                     "argumentTypes": null,
-                                    "id": 9895,
+                                    "id": 9776,
                                     "name": "proxy",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 9882,
+                                    "referencedDeclaration": 9763,
                                     "src": "1640:5:31",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                                       "typeString": "contract AdminUpgradeabilityProxy"
                                     }
                                   }
@@ -703,11 +703,11 @@
                                 "expression": {
                                   "argumentTypes": [
                                     {
-                                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                                       "typeString": "contract AdminUpgradeabilityProxy"
                                     }
                                   ],
-                                  "id": 9894,
+                                  "id": 9775,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": true,
@@ -720,7 +720,7 @@
                                   },
                                   "typeName": "address"
                                 },
-                                "id": 9896,
+                                "id": 9777,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -734,7 +734,7 @@
                                   "typeString": "address"
                                 }
                               },
-                              "id": 9897,
+                              "id": 9778,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -748,7 +748,7 @@
                                 "typeString": "function () payable returns (bool)"
                               }
                             },
-                            "id": 9898,
+                            "id": 9779,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -762,7 +762,7 @@
                               "typeString": "function (uint256) returns (function () payable returns (bool))"
                             }
                           },
-                          "id": 9901,
+                          "id": 9782,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -776,7 +776,7 @@
                             "typeString": "function () payable returns (bool)"
                           }
                         },
-                        "id": 9903,
+                        "id": 9784,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -798,21 +798,21 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 9893,
+                      "id": 9774,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9949,
-                        9950
+                        9830,
+                        9831
                       ],
-                      "referencedDeclaration": 9949,
+                      "referencedDeclaration": 9830,
                       "src": "1624:7:31",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 9904,
+                    "id": 9785,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -826,33 +826,33 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 9905,
+                  "id": 9786,
                   "nodeType": "ExpressionStatement",
                   "src": "1624:51:31"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 9906,
+                    "id": 9787,
                     "name": "proxy",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 9882,
+                    "referencedDeclaration": 9763,
                     "src": "1688:5:31",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                       "typeString": "contract AdminUpgradeabilityProxy"
                     }
                   },
-                  "functionReturnParameters": 9880,
-                  "id": 9907,
+                  "functionReturnParameters": 9761,
+                  "id": 9788,
                   "nodeType": "Return",
                   "src": "1681:12:31"
                 }
               ]
             },
             "documentation": "@dev Creates an upgradeability proxy with an initial implementation and calls it.\nThis is useful to initialize the proxied contract.\n@param admin Address of the proxy admin.\n@param implementation Address of the initial implementation.\n@param data Data to send as msg.data in the low level call.\nIt should include the signature and the parameters of the function to be\ncalled, as described in\nhttps://solidity.readthedocs.io/en/develop/abi-spec.html#function-selector-and-argument-encoding.\n@return Address of the new proxy.",
-            "id": 9909,
+            "id": 9790,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -860,15 +860,15 @@
             "name": "createProxyAndCall",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9877,
+              "id": 9758,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9872,
+                  "id": 9753,
                   "name": "admin",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9909,
+                  "scope": 9790,
                   "src": "1420:13:31",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -877,7 +877,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9871,
+                    "id": 9752,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1420:7:31",
@@ -891,10 +891,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 9874,
+                  "id": 9755,
                   "name": "implementation",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9909,
+                  "scope": 9790,
                   "src": "1435:22:31",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -903,7 +903,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9873,
+                    "id": 9754,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1435:7:31",
@@ -917,10 +917,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 9876,
+                  "id": 9757,
                   "name": "data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9909,
+                  "scope": 9790,
                   "src": "1459:10:31",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -929,7 +929,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 9875,
+                    "id": 9756,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "1459:5:31",
@@ -946,31 +946,31 @@
             },
             "payable": true,
             "returnParameters": {
-              "id": 9880,
+              "id": 9761,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9879,
+                  "id": 9760,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9909,
+                  "scope": 9790,
                   "src": "1495:24:31",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                    "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                     "typeString": "contract AdminUpgradeabilityProxy"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 9878,
+                    "id": 9759,
                     "name": "AdminUpgradeabilityProxy",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 9725,
+                    "referencedDeclaration": 9606,
                     "src": "1495:24:31",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                       "typeString": "contract AdminUpgradeabilityProxy"
                     }
                   },
@@ -980,7 +980,7 @@
               ],
               "src": "1494:26:31"
             },
-            "scope": 9931,
+            "scope": 9812,
             "src": "1392:306:31",
             "stateMutability": "payable",
             "superFunction": null,
@@ -988,37 +988,37 @@
           },
           {
             "body": {
-              "id": 9929,
+              "id": 9810,
               "nodeType": "Block",
               "src": "1969:136:31",
               "statements": [
                 {
                   "assignments": [
-                    9917
+                    9798
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 9917,
+                      "id": 9798,
                       "name": "proxy",
                       "nodeType": "VariableDeclaration",
-                      "scope": 9930,
+                      "scope": 9811,
                       "src": "1975:30:31",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                        "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                         "typeString": "contract AdminUpgradeabilityProxy"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 9916,
+                        "id": 9797,
                         "name": "AdminUpgradeabilityProxy",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 9725,
+                        "referencedDeclaration": 9606,
                         "src": "1975:24:31",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                           "typeString": "contract AdminUpgradeabilityProxy"
                         }
                       },
@@ -1026,17 +1026,17 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 9922,
+                  "id": 9803,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 9920,
+                        "id": 9801,
                         "name": "implementation",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9911,
+                        "referencedDeclaration": 9792,
                         "src": "2037:14:31",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1051,7 +1051,7 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 9919,
+                      "id": 9800,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1059,23 +1059,23 @@
                       "nodeType": "NewExpression",
                       "src": "2008:28:31",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_creation_nonpayable$_t_address_$returns$_t_contract$_AdminUpgradeabilityProxy_$9725_$",
+                        "typeIdentifier": "t_function_creation_nonpayable$_t_address_$returns$_t_contract$_AdminUpgradeabilityProxy_$9606_$",
                         "typeString": "function (address) returns (contract AdminUpgradeabilityProxy)"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 9918,
+                        "id": 9799,
                         "name": "AdminUpgradeabilityProxy",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 9725,
+                        "referencedDeclaration": 9606,
                         "src": "2012:24:31",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                           "typeString": "contract AdminUpgradeabilityProxy"
                         }
                       }
                     },
-                    "id": 9921,
+                    "id": 9802,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1085,7 +1085,7 @@
                     "nodeType": "FunctionCall",
                     "src": "2008:44:31",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                       "typeString": "contract AdminUpgradeabilityProxy"
                     }
                   },
@@ -1098,14 +1098,14 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 9924,
+                        "id": 9805,
                         "name": "proxy",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9917,
+                        "referencedDeclaration": 9798,
                         "src": "2076:5:31",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                           "typeString": "contract AdminUpgradeabilityProxy"
                         }
                       }
@@ -1113,22 +1113,22 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                           "typeString": "contract AdminUpgradeabilityProxy"
                         }
                       ],
-                      "id": 9923,
+                      "id": 9804,
                       "name": "ProxyCreated",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9846,
+                      "referencedDeclaration": 9727,
                       "src": "2063:12:31",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 9925,
+                    "id": 9806,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1142,33 +1142,33 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 9926,
+                  "id": 9807,
                   "nodeType": "EmitStatement",
                   "src": "2058:24:31"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 9927,
+                    "id": 9808,
                     "name": "proxy",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 9917,
+                    "referencedDeclaration": 9798,
                     "src": "2095:5:31",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                       "typeString": "contract AdminUpgradeabilityProxy"
                     }
                   },
-                  "functionReturnParameters": 9915,
-                  "id": 9928,
+                  "functionReturnParameters": 9796,
+                  "id": 9809,
                   "nodeType": "Return",
                   "src": "2088:12:31"
                 }
               ]
             },
             "documentation": "@dev Internal function to create an upgradeable proxy.\n@param implementation Address of the initial implementation.\n@return Address of the new proxy.",
-            "id": 9930,
+            "id": 9811,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -1176,15 +1176,15 @@
             "name": "_createProxy",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9912,
+              "id": 9793,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9911,
+                  "id": 9792,
                   "name": "implementation",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9930,
+                  "scope": 9811,
                   "src": "1901:22:31",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1193,7 +1193,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9910,
+                    "id": 9791,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1901:7:31",
@@ -1210,31 +1210,31 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 9915,
+              "id": 9796,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9914,
+                  "id": 9795,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9930,
+                  "scope": 9811,
                   "src": "1943:24:31",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                    "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                     "typeString": "contract AdminUpgradeabilityProxy"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 9913,
+                    "id": 9794,
                     "name": "AdminUpgradeabilityProxy",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 9725,
+                    "referencedDeclaration": 9606,
                     "src": "1943:24:31",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                       "typeString": "contract AdminUpgradeabilityProxy"
                     }
                   },
@@ -1244,14 +1244,14 @@
               ],
               "src": "1942:26:31"
             },
-            "scope": 9931,
+            "scope": 9812,
             "src": "1879:226:31",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "internal"
           }
         ],
-        "scope": 9932,
+        "scope": 9813,
         "src": "163:1944:31"
       }
     ],
@@ -1261,14 +1261,14 @@
     "absolutePath": "/Users/trantho/Code/SmartContract/digital-contracts/src/contracts/zos-lib/upgradeability/UpgradeabilityProxyFactory.sol",
     "exportedSymbols": {
       "UpgradeabilityProxyFactory": [
-        9931
+        9812
       ]
     },
-    "id": 9932,
+    "id": 9813,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 9841,
+        "id": 9722,
         "literals": [
           "solidity",
           "^",
@@ -1281,10 +1281,10 @@
       {
         "absolutePath": "/Users/trantho/Code/SmartContract/digital-contracts/src/contracts/zos-lib/upgradeability/AdminUpgradeabilityProxy.sol",
         "file": "./AdminUpgradeabilityProxy.sol",
-        "id": 9842,
+        "id": 9723,
         "nodeType": "ImportDirective",
-        "scope": 9932,
-        "sourceUnit": 9726,
+        "scope": 9813,
+        "sourceUnit": 9607,
         "src": "26:40:31",
         "symbolAliases": [],
         "unitAlias": ""
@@ -1292,14 +1292,14 @@
       {
         "baseContracts": [],
         "contractDependencies": [
-          9725
+          9606
         ],
         "contractKind": "contract",
         "documentation": "@title UpgradeabilityProxyFactory\n@dev Factory to create upgradeability proxies.",
         "fullyImplemented": true,
-        "id": 9931,
+        "id": 9812,
         "linearizedBaseContracts": [
-          9931
+          9812
         ],
         "name": "UpgradeabilityProxyFactory",
         "nodeType": "ContractDefinition",
@@ -1307,20 +1307,20 @@
           {
             "anonymous": false,
             "documentation": "@dev Emitted when a new proxy is created.\n@param proxy Address of the created proxy.",
-            "id": 9846,
+            "id": 9727,
             "name": "ProxyCreated",
             "nodeType": "EventDefinition",
             "parameters": {
-              "id": 9845,
+              "id": 9726,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9844,
+                  "id": 9725,
                   "indexed": false,
                   "name": "proxy",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9846,
+                  "scope": 9727,
                   "src": "329:13:31",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1329,7 +1329,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9843,
+                    "id": 9724,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "329:7:31",
@@ -1348,37 +1348,37 @@
           },
           {
             "body": {
-              "id": 9869,
+              "id": 9750,
               "nodeType": "Block",
               "src": "687:120:31",
               "statements": [
                 {
                   "assignments": [
-                    9856
+                    9737
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 9856,
+                      "id": 9737,
                       "name": "proxy",
                       "nodeType": "VariableDeclaration",
-                      "scope": 9870,
+                      "scope": 9751,
                       "src": "693:30:31",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                        "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                         "typeString": "contract AdminUpgradeabilityProxy"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 9855,
+                        "id": 9736,
                         "name": "AdminUpgradeabilityProxy",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 9725,
+                        "referencedDeclaration": 9606,
                         "src": "693:24:31",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                           "typeString": "contract AdminUpgradeabilityProxy"
                         }
                       },
@@ -1386,17 +1386,17 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 9860,
+                  "id": 9741,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 9858,
+                        "id": 9739,
                         "name": "implementation",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9850,
+                        "referencedDeclaration": 9731,
                         "src": "739:14:31",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1411,18 +1411,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 9857,
+                      "id": 9738,
                       "name": "_createProxy",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9930,
+                      "referencedDeclaration": 9811,
                       "src": "726:12:31",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$_t_contract$_AdminUpgradeabilityProxy_$9725_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$_t_contract$_AdminUpgradeabilityProxy_$9606_$",
                         "typeString": "function (address) returns (contract AdminUpgradeabilityProxy)"
                       }
                     },
-                    "id": 9859,
+                    "id": 9740,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1432,7 +1432,7 @@
                     "nodeType": "FunctionCall",
                     "src": "726:28:31",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                       "typeString": "contract AdminUpgradeabilityProxy"
                     }
                   },
@@ -1445,11 +1445,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 9864,
+                        "id": 9745,
                         "name": "admin",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9848,
+                        "referencedDeclaration": 9729,
                         "src": "778:5:31",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1466,32 +1466,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 9861,
+                        "id": 9742,
                         "name": "proxy",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9856,
+                        "referencedDeclaration": 9737,
                         "src": "760:5:31",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                           "typeString": "contract AdminUpgradeabilityProxy"
                         }
                       },
-                      "id": 9863,
+                      "id": 9744,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "changeAdmin",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 9645,
+                      "referencedDeclaration": 9526,
                       "src": "760:17:31",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address) external"
                       }
                     },
-                    "id": 9865,
+                    "id": 9746,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1505,33 +1505,33 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 9866,
+                  "id": 9747,
                   "nodeType": "ExpressionStatement",
                   "src": "760:24:31"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 9867,
+                    "id": 9748,
                     "name": "proxy",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 9856,
+                    "referencedDeclaration": 9737,
                     "src": "797:5:31",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                       "typeString": "contract AdminUpgradeabilityProxy"
                     }
                   },
-                  "functionReturnParameters": 9854,
-                  "id": 9868,
+                  "functionReturnParameters": 9735,
+                  "id": 9749,
                   "nodeType": "Return",
                   "src": "790:12:31"
                 }
               ]
             },
             "documentation": "@dev Creates an upgradeability proxy with an initial implementation.\n@param admin Address of the proxy admin.\n@param implementation Address of the initial implementation.\n@return Address of the new proxy.",
-            "id": 9870,
+            "id": 9751,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -1539,15 +1539,15 @@
             "name": "createProxy",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9851,
+              "id": 9732,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9848,
+                  "id": 9729,
                   "name": "admin",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9870,
+                  "scope": 9751,
                   "src": "606:13:31",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1556,7 +1556,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9847,
+                    "id": 9728,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "606:7:31",
@@ -1570,10 +1570,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 9850,
+                  "id": 9731,
                   "name": "implementation",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9870,
+                  "scope": 9751,
                   "src": "621:22:31",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -1582,7 +1582,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9849,
+                    "id": 9730,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "621:7:31",
@@ -1599,31 +1599,31 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 9854,
+              "id": 9735,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9853,
+                  "id": 9734,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9870,
+                  "scope": 9751,
                   "src": "661:24:31",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                    "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                     "typeString": "contract AdminUpgradeabilityProxy"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 9852,
+                    "id": 9733,
                     "name": "AdminUpgradeabilityProxy",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 9725,
+                    "referencedDeclaration": 9606,
                     "src": "661:24:31",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                       "typeString": "contract AdminUpgradeabilityProxy"
                     }
                   },
@@ -1633,7 +1633,7 @@
               ],
               "src": "660:26:31"
             },
-            "scope": 9931,
+            "scope": 9812,
             "src": "585:222:31",
             "stateMutability": "nonpayable",
             "superFunction": null,
@@ -1641,37 +1641,37 @@
           },
           {
             "body": {
-              "id": 9908,
+              "id": 9789,
               "nodeType": "Block",
               "src": "1521:177:31",
               "statements": [
                 {
                   "assignments": [
-                    9882
+                    9763
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 9882,
+                      "id": 9763,
                       "name": "proxy",
                       "nodeType": "VariableDeclaration",
-                      "scope": 9909,
+                      "scope": 9790,
                       "src": "1527:30:31",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                        "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                         "typeString": "contract AdminUpgradeabilityProxy"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 9881,
+                        "id": 9762,
                         "name": "AdminUpgradeabilityProxy",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 9725,
+                        "referencedDeclaration": 9606,
                         "src": "1527:24:31",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                           "typeString": "contract AdminUpgradeabilityProxy"
                         }
                       },
@@ -1679,17 +1679,17 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 9886,
+                  "id": 9767,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 9884,
+                        "id": 9765,
                         "name": "implementation",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9874,
+                        "referencedDeclaration": 9755,
                         "src": "1573:14:31",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1704,18 +1704,18 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 9883,
+                      "id": 9764,
                       "name": "_createProxy",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9930,
+                      "referencedDeclaration": 9811,
                       "src": "1560:12:31",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$_t_contract$_AdminUpgradeabilityProxy_$9725_$",
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$_t_contract$_AdminUpgradeabilityProxy_$9606_$",
                         "typeString": "function (address) returns (contract AdminUpgradeabilityProxy)"
                       }
                     },
-                    "id": 9885,
+                    "id": 9766,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1725,7 +1725,7 @@
                     "nodeType": "FunctionCall",
                     "src": "1560:28:31",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                       "typeString": "contract AdminUpgradeabilityProxy"
                     }
                   },
@@ -1738,11 +1738,11 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 9890,
+                        "id": 9771,
                         "name": "admin",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9872,
+                        "referencedDeclaration": 9753,
                         "src": "1612:5:31",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -1759,32 +1759,32 @@
                       ],
                       "expression": {
                         "argumentTypes": null,
-                        "id": 9887,
+                        "id": 9768,
                         "name": "proxy",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9882,
+                        "referencedDeclaration": 9763,
                         "src": "1594:5:31",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                           "typeString": "contract AdminUpgradeabilityProxy"
                         }
                       },
-                      "id": 9889,
+                      "id": 9770,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "changeAdmin",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 9645,
+                      "referencedDeclaration": 9526,
                       "src": "1594:17:31",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address) external"
                       }
                     },
-                    "id": 9891,
+                    "id": 9772,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1798,7 +1798,7 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 9892,
+                  "id": 9773,
                   "nodeType": "ExpressionStatement",
                   "src": "1594:24:31"
                 },
@@ -1811,11 +1811,11 @@
                         "arguments": [
                           {
                             "argumentTypes": null,
-                            "id": 9902,
+                            "id": 9783,
                             "name": "data",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 9876,
+                            "referencedDeclaration": 9757,
                             "src": "1669:4:31",
                             "typeDescriptions": {
                               "typeIdentifier": "t_bytes_memory_ptr",
@@ -1835,18 +1835,18 @@
                               "argumentTypes": null,
                               "expression": {
                                 "argumentTypes": null,
-                                "id": 9899,
+                                "id": 9780,
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 9946,
+                                "referencedDeclaration": 9827,
                                 "src": "1658:3:31",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
                                   "typeString": "msg"
                                 }
                               },
-                              "id": 9900,
+                              "id": 9781,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -1875,14 +1875,14 @@
                                 "arguments": [
                                   {
                                     "argumentTypes": null,
-                                    "id": 9895,
+                                    "id": 9776,
                                     "name": "proxy",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 9882,
+                                    "referencedDeclaration": 9763,
                                     "src": "1640:5:31",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                                       "typeString": "contract AdminUpgradeabilityProxy"
                                     }
                                   }
@@ -1890,11 +1890,11 @@
                                 "expression": {
                                   "argumentTypes": [
                                     {
-                                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                                       "typeString": "contract AdminUpgradeabilityProxy"
                                     }
                                   ],
-                                  "id": 9894,
+                                  "id": 9775,
                                   "isConstant": false,
                                   "isLValue": false,
                                   "isPure": true,
@@ -1907,7 +1907,7 @@
                                   },
                                   "typeName": "address"
                                 },
-                                "id": 9896,
+                                "id": 9777,
                                 "isConstant": false,
                                 "isLValue": false,
                                 "isPure": false,
@@ -1921,7 +1921,7 @@
                                   "typeString": "address"
                                 }
                               },
-                              "id": 9897,
+                              "id": 9778,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -1935,7 +1935,7 @@
                                 "typeString": "function () payable returns (bool)"
                               }
                             },
-                            "id": 9898,
+                            "id": 9779,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": false,
@@ -1949,7 +1949,7 @@
                               "typeString": "function (uint256) returns (function () payable returns (bool))"
                             }
                           },
-                          "id": 9901,
+                          "id": 9782,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1963,7 +1963,7 @@
                             "typeString": "function () payable returns (bool)"
                           }
                         },
-                        "id": 9903,
+                        "id": 9784,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
@@ -1985,21 +1985,21 @@
                           "typeString": "bool"
                         }
                       ],
-                      "id": 9893,
+                      "id": 9774,
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        9949,
-                        9950
+                        9830,
+                        9831
                       ],
-                      "referencedDeclaration": 9949,
+                      "referencedDeclaration": 9830,
                       "src": "1624:7:31",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
                         "typeString": "function (bool) pure"
                       }
                     },
-                    "id": 9904,
+                    "id": 9785,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2013,33 +2013,33 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 9905,
+                  "id": 9786,
                   "nodeType": "ExpressionStatement",
                   "src": "1624:51:31"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 9906,
+                    "id": 9787,
                     "name": "proxy",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 9882,
+                    "referencedDeclaration": 9763,
                     "src": "1688:5:31",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                       "typeString": "contract AdminUpgradeabilityProxy"
                     }
                   },
-                  "functionReturnParameters": 9880,
-                  "id": 9907,
+                  "functionReturnParameters": 9761,
+                  "id": 9788,
                   "nodeType": "Return",
                   "src": "1681:12:31"
                 }
               ]
             },
             "documentation": "@dev Creates an upgradeability proxy with an initial implementation and calls it.\nThis is useful to initialize the proxied contract.\n@param admin Address of the proxy admin.\n@param implementation Address of the initial implementation.\n@param data Data to send as msg.data in the low level call.\nIt should include the signature and the parameters of the function to be\ncalled, as described in\nhttps://solidity.readthedocs.io/en/develop/abi-spec.html#function-selector-and-argument-encoding.\n@return Address of the new proxy.",
-            "id": 9909,
+            "id": 9790,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -2047,15 +2047,15 @@
             "name": "createProxyAndCall",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9877,
+              "id": 9758,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9872,
+                  "id": 9753,
                   "name": "admin",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9909,
+                  "scope": 9790,
                   "src": "1420:13:31",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2064,7 +2064,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9871,
+                    "id": 9752,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1420:7:31",
@@ -2078,10 +2078,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 9874,
+                  "id": 9755,
                   "name": "implementation",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9909,
+                  "scope": 9790,
                   "src": "1435:22:31",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2090,7 +2090,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9873,
+                    "id": 9754,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1435:7:31",
@@ -2104,10 +2104,10 @@
                 },
                 {
                   "constant": false,
-                  "id": 9876,
+                  "id": 9757,
                   "name": "data",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9909,
+                  "scope": 9790,
                   "src": "1459:10:31",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2116,7 +2116,7 @@
                     "typeString": "bytes"
                   },
                   "typeName": {
-                    "id": 9875,
+                    "id": 9756,
                     "name": "bytes",
                     "nodeType": "ElementaryTypeName",
                     "src": "1459:5:31",
@@ -2133,31 +2133,31 @@
             },
             "payable": true,
             "returnParameters": {
-              "id": 9880,
+              "id": 9761,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9879,
+                  "id": 9760,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9909,
+                  "scope": 9790,
                   "src": "1495:24:31",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                    "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                     "typeString": "contract AdminUpgradeabilityProxy"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 9878,
+                    "id": 9759,
                     "name": "AdminUpgradeabilityProxy",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 9725,
+                    "referencedDeclaration": 9606,
                     "src": "1495:24:31",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                       "typeString": "contract AdminUpgradeabilityProxy"
                     }
                   },
@@ -2167,7 +2167,7 @@
               ],
               "src": "1494:26:31"
             },
-            "scope": 9931,
+            "scope": 9812,
             "src": "1392:306:31",
             "stateMutability": "payable",
             "superFunction": null,
@@ -2175,37 +2175,37 @@
           },
           {
             "body": {
-              "id": 9929,
+              "id": 9810,
               "nodeType": "Block",
               "src": "1969:136:31",
               "statements": [
                 {
                   "assignments": [
-                    9917
+                    9798
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 9917,
+                      "id": 9798,
                       "name": "proxy",
                       "nodeType": "VariableDeclaration",
-                      "scope": 9930,
+                      "scope": 9811,
                       "src": "1975:30:31",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                        "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                         "typeString": "contract AdminUpgradeabilityProxy"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 9916,
+                        "id": 9797,
                         "name": "AdminUpgradeabilityProxy",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 9725,
+                        "referencedDeclaration": 9606,
                         "src": "1975:24:31",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                           "typeString": "contract AdminUpgradeabilityProxy"
                         }
                       },
@@ -2213,17 +2213,17 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 9922,
+                  "id": 9803,
                   "initialValue": {
                     "argumentTypes": null,
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 9920,
+                        "id": 9801,
                         "name": "implementation",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9911,
+                        "referencedDeclaration": 9792,
                         "src": "2037:14:31",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -2238,7 +2238,7 @@
                           "typeString": "address"
                         }
                       ],
-                      "id": 9919,
+                      "id": 9800,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -2246,23 +2246,23 @@
                       "nodeType": "NewExpression",
                       "src": "2008:28:31",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_creation_nonpayable$_t_address_$returns$_t_contract$_AdminUpgradeabilityProxy_$9725_$",
+                        "typeIdentifier": "t_function_creation_nonpayable$_t_address_$returns$_t_contract$_AdminUpgradeabilityProxy_$9606_$",
                         "typeString": "function (address) returns (contract AdminUpgradeabilityProxy)"
                       },
                       "typeName": {
                         "contractScope": null,
-                        "id": 9918,
+                        "id": 9799,
                         "name": "AdminUpgradeabilityProxy",
                         "nodeType": "UserDefinedTypeName",
-                        "referencedDeclaration": 9725,
+                        "referencedDeclaration": 9606,
                         "src": "2012:24:31",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                           "typeString": "contract AdminUpgradeabilityProxy"
                         }
                       }
                     },
-                    "id": 9921,
+                    "id": 9802,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2272,7 +2272,7 @@
                     "nodeType": "FunctionCall",
                     "src": "2008:44:31",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                       "typeString": "contract AdminUpgradeabilityProxy"
                     }
                   },
@@ -2285,14 +2285,14 @@
                     "arguments": [
                       {
                         "argumentTypes": null,
-                        "id": 9924,
+                        "id": 9805,
                         "name": "proxy",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 9917,
+                        "referencedDeclaration": 9798,
                         "src": "2076:5:31",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                           "typeString": "contract AdminUpgradeabilityProxy"
                         }
                       }
@@ -2300,22 +2300,22 @@
                     "expression": {
                       "argumentTypes": [
                         {
-                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                          "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                           "typeString": "contract AdminUpgradeabilityProxy"
                         }
                       ],
-                      "id": 9923,
+                      "id": 9804,
                       "name": "ProxyCreated",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 9846,
+                      "referencedDeclaration": 9727,
                       "src": "2063:12:31",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$returns$__$",
                         "typeString": "function (address)"
                       }
                     },
-                    "id": 9925,
+                    "id": 9806,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -2329,33 +2329,33 @@
                       "typeString": "tuple()"
                     }
                   },
-                  "id": 9926,
+                  "id": 9807,
                   "nodeType": "EmitStatement",
                   "src": "2058:24:31"
                 },
                 {
                   "expression": {
                     "argumentTypes": null,
-                    "id": 9927,
+                    "id": 9808,
                     "name": "proxy",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 9917,
+                    "referencedDeclaration": 9798,
                     "src": "2095:5:31",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                       "typeString": "contract AdminUpgradeabilityProxy"
                     }
                   },
-                  "functionReturnParameters": 9915,
-                  "id": 9928,
+                  "functionReturnParameters": 9796,
+                  "id": 9809,
                   "nodeType": "Return",
                   "src": "2088:12:31"
                 }
               ]
             },
             "documentation": "@dev Internal function to create an upgradeable proxy.\n@param implementation Address of the initial implementation.\n@return Address of the new proxy.",
-            "id": 9930,
+            "id": 9811,
             "implemented": true,
             "isConstructor": false,
             "isDeclaredConst": false,
@@ -2363,15 +2363,15 @@
             "name": "_createProxy",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 9912,
+              "id": 9793,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9911,
+                  "id": 9792,
                   "name": "implementation",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9930,
+                  "scope": 9811,
                   "src": "1901:22:31",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -2380,7 +2380,7 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 9910,
+                    "id": 9791,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "1901:7:31",
@@ -2397,31 +2397,31 @@
             },
             "payable": false,
             "returnParameters": {
-              "id": 9915,
+              "id": 9796,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 9914,
+                  "id": 9795,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 9930,
+                  "scope": 9811,
                   "src": "1943:24:31",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                    "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                     "typeString": "contract AdminUpgradeabilityProxy"
                   },
                   "typeName": {
                     "contractScope": null,
-                    "id": 9913,
+                    "id": 9794,
                     "name": "AdminUpgradeabilityProxy",
                     "nodeType": "UserDefinedTypeName",
-                    "referencedDeclaration": 9725,
+                    "referencedDeclaration": 9606,
                     "src": "1943:24:31",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9725",
+                      "typeIdentifier": "t_contract$_AdminUpgradeabilityProxy_$9606",
                       "typeString": "contract AdminUpgradeabilityProxy"
                     }
                   },
@@ -2431,14 +2431,14 @@
               ],
               "src": "1942:26:31"
             },
-            "scope": 9931,
+            "scope": 9812,
             "src": "1879:226:31",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "internal"
           }
         ],
-        "scope": 9932,
+        "scope": 9813,
         "src": "163:1944:31"
       }
     ],
@@ -2450,5 +2450,5 @@
   },
   "networks": {},
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-12-20T07:35:09.136Z"
+  "updatedAt": "2018-12-22T03:21:10.962Z"
 }
