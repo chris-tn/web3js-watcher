@@ -155,7 +155,7 @@ var fs = require('fs');
     await paramsContract.methods.transferOwnership(accounts[0]).send({from: accounts[0]});
     await paramsContract.methods.setStorage(storage.address).send({from: accounts[0]});
     await paramsContract.methods.addAdmin(accounts[0], true).send({from: accounts[0]});
-    await paramsContract.methods.setVotingParams(100, 1000, 3000, 24 * 60 * 60, 24 * 60 * 60,
+    await paramsContract.methods.setVotingParams(100, 1000, 1000, 24 * 60 * 60, 24 * 60 * 60,
         24 * 60 * 60, 100).send({from: accounts[0]});
    
     
@@ -168,7 +168,8 @@ var fs = require('fs');
     obj.PAYMENT = {address : proxyAddressPayment, events : ['PaymentClaimed','PaymentAccepted','PaymentRejected','DisputeFinalized','DepositMoney']};
     obj.DISPUTE = {address : proxyAddressDispute, events : ['DisputeFinalized','DisputeStarted','DisputeAgainsted','DisputeUpdated']};
     obj.VOTING = {address : proxyAddressVoting, events : ['PollStarted','PollUpdated','PollOptionAdded','VotingRightsGranted','VotingRightsWithdrawn','VoteCommitted','VoteRevealed']};
-    
+    obj.VOTINGHELPER = {address : proxyAddressVotingHepler, events : []};
+
 
 
     var json = JSON.stringify(obj);

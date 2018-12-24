@@ -55,6 +55,26 @@ start = async () => {
             }
         }
 
+        if(result.DISPUTE) {
+            let obj = result.DISPUTE;
+            for(let i = 0; i < obj.events.length; i++) {
+                console.log('Starting watching eventName ' + obj.events[i] + ' from BBDispute')
+                watcherTest.watchEvent('BBDispute', obj.events[i], obj.address);
+
+            }
+        }
+
+        if(result.VOTING) {
+            let obj = result.VOTING;
+            for(let i = 0; i < obj.events.length; i++) {
+                console.log('Starting watching eventName ' + obj.events[i] + ' from BBVoting')
+                watcherTest.watchEvent('BBVoting', obj.events[i], obj.address);
+
+            }
+        }
+
+        
+
     });
 }
 

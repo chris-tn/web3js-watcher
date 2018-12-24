@@ -74,9 +74,9 @@ module.exports.getRandomDifferentAccount = function(accounts, currentAccount ) {
 
 ////////////////////////////////////////////////////////////////////////////////
 
-module.exports.sendPromise = function(method, params) {
+module.exports.sendPromise = function(method, web3,params) {
     return new Promise(function(fulfill, reject){
-        web3.currentProvider.sendAsync({
+        web3.currentProvider.send({
           jsonrpc: '2.0',
           method,
           params: params || [],

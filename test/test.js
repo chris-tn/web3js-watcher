@@ -41,13 +41,13 @@ describe('Unit Test', async function () {
         });
         assert(bboBalance > bboBalance1);
 
-        // let data = await watcherTest.getLatestBlockNumber('BBOTest','Transfer');
+        let data = await watcherTest.getLatestBlockNumber('BBOTest','Transfer');
 
-        // let result = await watcherTest.getDataOnNetWork('BBOTest','Transfer',dataJson.BBOTest.address, data.blockNumber);
+        let result = await watcherTest.getDataOnNetWork('BBOTest','Transfer',dataJson.BBOTest.address, data.blockNumber);
 
-        // let lastBlock = result[result.length - 1];
+        let lastBlock = result[result.length - 1];
         
-        // assert(data.value, lastBlock.returnValues.value);
+        assert(data.value, lastBlock.returnValues.value);
     });
 
     var jobHash1 = '';
@@ -56,6 +56,8 @@ describe('Unit Test', async function () {
     var jobID_0;
     var jobID_1;
     var jobID_2;
+    var jobID_3;
+
 
     it('Job create', async function() {
         const jobContract = await new web3.eth.Contract(contract_abi.json.BBFreelancerJob.abi, dataJson.JOB.address, {
@@ -64,6 +66,8 @@ describe('Unit Test', async function () {
         jobHash1 = web3.utils.toHex('jobHash1');
         jobHash2 = web3.utils.toHex('jobHash2');
         jobHash3 = web3.utils.toHex('jobHash3');
+        jobHash4 = web3.utils.toHex('jobHash4');
+
 
         var expiredTime = parseInt(Date.now() / 1000) + 7 * 24 * 3600; // expired after 7 days
         var timeBid = 3 * 24 * 3600;
@@ -75,14 +79,18 @@ describe('Unit Test', async function () {
         l = await jobContract.methods.createJob(jobHash3, expiredTime, timeBid, web3.utils.toWei('11', 'ether'), web3.utils.toHex('top')).send({from : accounts[0]});
         jobID_2 =  l.events.JobCreated.returnValues.jobID;
 
+        l = await jobContract.methods.createJob(jobHash4, expiredTime, timeBid, web3.utils.toWei('11', 'ether'), web3.utils.toHex('top')).send({from : accounts[0]});
+        jobID_3 =  l.events.JobCreated.returnValues.jobID;
 
-        // let data = await watcherTest.getLatestBlockNumber('BBFreelancerJob','JobCreated');
 
-        // let result = await watcherTest.getDataOnNetWork('BBFreelancerJob','JobCreated',dataJson.JOB.address, data.blockNumber);
 
-        // let lastBlock = result[result.length - 1];
+        let data = await watcherTest.getLatestBlockNumber('BBFreelancerJob','JobCreated');
+
+        let result = await watcherTest.getDataOnNetWork('BBFreelancerJob','JobCreated',dataJson.JOB.address, data.blockNumber);
+
+        let lastBlock = result[result.length - 1];
         
-        // assert(data.jobID, lastBlock.returnValues.jobID);
+        assert(data.jobID, lastBlock.returnValues.jobID);
 
     });
 
@@ -96,13 +104,14 @@ describe('Unit Test', async function () {
         await bidContract.methods.createBid(userID, jobID_0,  '999', timeDone).send({from : accounts[1]});
         await bidContract.methods.createBid(userID, jobID_1,  '888', timeDone).send({from : accounts[1]});
         await bidContract.methods.createBid(userID, jobID_2,  '888', timeDone).send({from : accounts[1]});
+        await bidContract.methods.createBid(userID, jobID_3,  '888', timeDone).send({from : accounts[1]});
 
-        // let data = await watcherTest.getLatestBlockNumber('BBFreelancerBid','BidCreated');
-        // let result = await watcherTest.getDataOnNetWork('BBFreelancerBid','BidCreated',dataJson.BID.address, data.blockNumber);
+        let data = await watcherTest.getLatestBlockNumber('BBFreelancerBid','BidCreated');
+        let result = await watcherTest.getDataOnNetWork('BBFreelancerBid','BidCreated',dataJson.BID.address, data.blockNumber);
 
-        // let lastBlock = result[result.length - 1];
+        let lastBlock = result[result.length - 1];
         
-        // assert(data.jobID, lastBlock.returnValues.jobID);
+        assert(data.jobID, lastBlock.returnValues.jobID);
 
     });
 
@@ -115,12 +124,14 @@ describe('Unit Test', async function () {
         await bidContract.methods.acceptBid(1777,jobID_0, accounts[1]).send({from : accounts[0]});
         await bidContract.methods.acceptBid(1777,jobID_1, accounts[1]).send({from : accounts[0]});
         await bidContract.methods.acceptBid(1777,jobID_2, accounts[1]).send({from : accounts[0]});
-        // let data = await watcherTest.getLatestBlockNumber('BBFreelancerBid','BidAccepted');
-        // let result = await watcherTest.getDataOnNetWork('BBFreelancerBid','BidAccepted',dataJson.BID.address, data.blockNumber);
+        await bidContract.methods.acceptBid(1777,jobID_3, accounts[1]).send({from : accounts[0]});
 
-        // let lastBlock = result[result.length - 1];
+        let data = await watcherTest.getLatestBlockNumber('BBFreelancerBid','BidAccepted');
+        let result = await watcherTest.getDataOnNetWork('BBFreelancerBid','BidAccepted',dataJson.BID.address, data.blockNumber);
+
+        let lastBlock = result[result.length - 1];
         
-        // assert(data.jobID, lastBlock.returnValues.jobID);
+        assert(data.jobID, lastBlock.returnValues.jobID);
 
     });
 
@@ -133,12 +144,12 @@ describe('Unit Test', async function () {
         await bidContract.methods.cancelBid(jobID_1).send({from : accounts[0]});
         await bidContract.methods.acceptBid(1777,jobID_0, accounts[1]).send({from : accounts[0]});
         
-        // let data = await watcherTest.getLatestBlockNumber('BBFreelancerBid','BidCanceled');
-        // let result = await watcherTest.getDataOnNetWork('BBFreelancerBid','BidCanceled',dataJson.BID.address, data.blockNumber);
+        let data = await watcherTest.getLatestBlockNumber('BBFreelancerBid','BidCanceled');
+        let result = await watcherTest.getDataOnNetWork('BBFreelancerBid','BidCanceled',dataJson.BID.address, data.blockNumber);
 
-        // let lastBlock = result[result.length - 1];
+        let lastBlock = result[result.length - 1];
         
-        // assert(data.jobID, lastBlock.returnValues.jobID);
+        assert(data.jobID, lastBlock.returnValues.jobID);
 
     });
 
@@ -152,12 +163,12 @@ describe('Unit Test', async function () {
         let jobID = l.events.JobCreated.returnValues.jobID;
         await jobContract.methods.cancelJob(jobID).send({from : accounts[0]});
 
-        // let data = await watcherTest.getLatestBlockNumber('BBFreelancerJob','JobCanceled');
-        // let result = await watcherTest.getDataOnNetWork('BBFreelancerJob','JobCanceled',dataJson.JOB.address, data.blockNumber);
+        let data = await watcherTest.getLatestBlockNumber('BBFreelancerJob','JobCanceled');
+        let result = await watcherTest.getDataOnNetWork('BBFreelancerJob','JobCanceled',dataJson.JOB.address, data.blockNumber);
 
-        // let lastBlock = result[result.length - 1];
+        let lastBlock = result[result.length - 1];
         
-        // assert(data.jobID, lastBlock.returnValues.jobID);
+        assert(data.jobID, lastBlock.returnValues.jobID);
 
     });
 
@@ -168,12 +179,14 @@ describe('Unit Test', async function () {
        
         await jobContract.methods.startJob(jobID_0).send({from : accounts[1]});
         await jobContract.methods.startJob(jobID_2).send({from : accounts[1]});
-        // let data = await watcherTest.getLatestBlockNumber('BBFreelancerJob','JobStarted');
-        // let result = await watcherTest.getDataOnNetWork('BBFreelancerJob','JobStarted',dataJson.JOB.address, data.blockNumber);
+        await jobContract.methods.startJob(jobID_3).send({from : accounts[1]});
 
-        // let lastBlock = result[result.length - 1];
+        let data = await watcherTest.getLatestBlockNumber('BBFreelancerJob','JobStarted');
+        let result = await watcherTest.getDataOnNetWork('BBFreelancerJob','JobStarted',dataJson.JOB.address, data.blockNumber);
+
+        let lastBlock = result[result.length - 1];
         
-        // assert(data.jobID, lastBlock.returnValues.jobID);
+        assert(data.jobID, lastBlock.returnValues.jobID);
 
     });
 
@@ -184,12 +197,14 @@ describe('Unit Test', async function () {
        
         await jobContract.methods.finishJob(jobID_0).send({from : accounts[1]});
         await jobContract.methods.finishJob(jobID_2).send({from : accounts[1]});
-        // let data = await watcherTest.getLatestBlockNumber('BBFreelancerJob','JobFinished');
-        // let result = await watcherTest.getDataOnNetWork('BBFreelancerJob','JobFinished',dataJson.JOB.address, data.blockNumber);
+        await jobContract.methods.finishJob(jobID_3).send({from : accounts[1]});
 
-        // let lastBlock = result[result.length - 1];
+        let data = await watcherTest.getLatestBlockNumber('BBFreelancerJob','JobFinished');
+        let result = await watcherTest.getDataOnNetWork('BBFreelancerJob','JobFinished',dataJson.JOB.address, data.blockNumber);
+
+        let lastBlock = result[result.length - 1];
         
-        // assert(data.jobID, lastBlock.returnValues.jobID);
+        assert(data.jobID, lastBlock.returnValues.jobID);
 
     });
 
@@ -199,12 +214,12 @@ describe('Unit Test', async function () {
         });
         await paymentContract.methods.acceptPayment(jobID_0).send({from : accounts[0]});
 
-        // let data = await watcherTest.getLatestBlockNumber('BBFreelancerPayment','PaymentAccepted');
-        // let result = await watcherTest.getDataOnNetWork('BBFreelancerPayment','PaymentAccepted',dataJson.PAYMENT.address, data.blockNumber);
+        let data = await watcherTest.getLatestBlockNumber('BBFreelancerPayment','PaymentAccepted');
+        let result = await watcherTest.getDataOnNetWork('BBFreelancerPayment','PaymentAccepted',dataJson.PAYMENT.address, data.blockNumber);
 
-        // let lastBlock = result[result.length - 1];
+        let lastBlock = result[result.length - 1];
         
-        // assert(data.jobID, lastBlock.returnValues.jobID);
+        assert(data.jobID, lastBlock.returnValues.jobID);
 
     });
 
@@ -213,13 +228,15 @@ describe('Unit Test', async function () {
             from: accounts[0]
         });
         await paymentContract.methods.rejectPayment(jobID_2, 1).send({from : accounts[0]});
+        await paymentContract.methods.rejectPayment(jobID_3, 1).send({from : accounts[0]});
 
-        // let data = await watcherTest.getLatestBlockNumber('BBFreelancerPayment','PaymentRejected');
-        // let result = await watcherTest.getDataOnNetWork('BBFreelancerPayment','PaymentRejected',dataJson.PAYMENT.address, data.blockNumber);
 
-        // let lastBlock = result[result.length - 1];
+        let data = await watcherTest.getLatestBlockNumber('BBFreelancerPayment','PaymentRejected');
+        let result = await watcherTest.getDataOnNetWork('BBFreelancerPayment','PaymentRejected',dataJson.PAYMENT.address, data.blockNumber);
+
+        let lastBlock = result[result.length - 1];
         
-        // assert(data.jobID, lastBlock.returnValues.jobID);
+        assert(data.jobID, lastBlock.returnValues.jobID);
 
     });
 
@@ -229,20 +246,33 @@ describe('Unit Test', async function () {
         });
         
         await ratingContract.methods.rate(accounts[0], jobID_0 , 3 , web3.utils.toHex('ok')).send({from :accounts[1]});
-        // let data = await watcherTest.getLatestBlockNumber('BBRating','Rating');
-        // let result = await watcherTest.getDataOnNetWork('BBRating','Rating',dataJson.RATING.address, data.blockNumber);
+        let data = await watcherTest.getLatestBlockNumber('BBRating','Rating');
+        let result = await watcherTest.getDataOnNetWork('BBRating','Rating',dataJson.RATING.address, data.blockNumber);
 
-        // let lastBlock = result[result.length - 1];
+        let lastBlock = result[result.length - 1];
         
-        // assert(data.jobID, lastBlock.returnValues.jobID);
+        assert(data.jobID, lastBlock.returnValues.jobID);
     });
+
+    let poll_ID = 0; 
+    let poll_ID_1 = 0;
 
     it('startDispute', async function() {
         const disputeContract = await new web3.eth.Contract(contract_abi.json.BBDispute.abi, dataJson.DISPUTE.address, {
             from: accounts[0]
         });
         let l = await disputeContract.methods.startDispute(jobID_2, web3.utils.toHex('proofhash1')).send({from : accounts[1]});
-        //console.log(l);
+        poll_ID = l.events.DisputeStarted.returnValues.pollID;
+
+        l = await disputeContract.methods.startDispute(jobID_3, web3.utils.toHex('proofhash1')).send({from : accounts[1]});
+        poll_ID_1 = l.events.DisputeStarted.returnValues.pollID;
+
+        let data = await watcherTest.getLatestBlockNumber('BBDispute','DisputeStarted');
+        let result = await watcherTest.getDataOnNetWork('BBDispute','DisputeStarted',dataJson.DISPUTE.address, data.blockNumber);
+
+        let lastBlock = result[result.length - 1];
+        
+        assert(data.jobID, lastBlock.returnValues.jobID);
     });
 
     it('againstDispute', async function() {
@@ -250,6 +280,15 @@ describe('Unit Test', async function () {
             from: accounts[0]
         });
         await disputeContract.methods.againstDispute(jobID_2, web3.utils.toHex('proofhash2')).send({from : accounts[0]});
+        await disputeContract.methods.againstDispute(jobID_3, web3.utils.toHex('proofhash2')).send({from : accounts[0]});
+
+        let data = await watcherTest.getLatestBlockNumber('BBDispute','DisputeAgainsted');
+        let result = await watcherTest.getDataOnNetWork('BBDispute','DisputeAgainsted',dataJson.DISPUTE.address, data.blockNumber);
+
+        let lastBlock = result[result.length - 1];
+        
+        assert(data.jobID, lastBlock.returnValues.jobID);
+
 
     });
 
@@ -257,17 +296,136 @@ describe('Unit Test', async function () {
         const votingContract = await new web3.eth.Contract(contract_abi.json.BBVoting.abi, dataJson.VOTING.address, {
             from: accounts[0]
         });
-        await votingContract.methods.requestVotingRights(1000).send({from : accounts[3]});
+        await votingContract.methods.requestVotingRights(10000).send({from : accounts[3]});
+        await votingContract.methods.requestVotingRights(10000).send({from : accounts[4]});
+
+        let data = await watcherTest.getLatestBlockNumber('BBVoting','VotingRightsGranted');
+        let result = await watcherTest.getDataOnNetWork('BBVoting','VotingRightsGranted',dataJson.VOTING.address, data.blockNumber);
+
+        let lastBlock = result[result.length - 1];
+    
+        assert(data.numTokens, lastBlock.returnValues.numTokens);
 
     });
 
     it("fast forward to 24h", function () {
-        var fastForwardTime = 24 * 3600 + 1;
-        return Helpers.sendPromise('evm_increaseTime', [fastForwardTime]).then(function () {
-          return Helpers.sendPromise('evm_mine', []).then(function () {
+        var fastForwardTime = 24 * 3600 * 1 + 1;
+        return Helpers.sendPromise('evm_increaseTime', web3,[fastForwardTime]).then(function () {
+          return Helpers.sendPromise('evm_mine', web3,[]).then(function () {
     
           });
         });
+    });
+
+    it('commit vote', async function() {
+
+      const votingContract = await new web3.eth.Contract(contract_abi.json.BBVoting.abi, dataJson.VOTING.address, {
+            from: accounts[0]
+        });
+
+        await votingContract.methods.commitVote(poll_ID,web3.utils.soliditySha3(1, 123), 1000).send({from : accounts[3]});
+        await votingContract.methods.commitVote(poll_ID,web3.utils.soliditySha3(0, 123), 2000).send({from : accounts[4]});    
+        
+        let data = await watcherTest.getLatestBlockNumber('BBVoting','VoteCommitted');
+        let result = await watcherTest.getDataOnNetWork('BBVoting','VoteCommitted',dataJson.VOTING.address, data.blockNumber);
+
+        let lastBlock = result[result.length - 1];
+    
+        assert(data.pollID, lastBlock.returnValues.pollID);
+
+    }); 
+
+    it("fast forward to 24h", function () {
+        var fastForwardTime = 24 * 3600 * 1 + 1;
+        return Helpers.sendPromise('evm_increaseTime', web3,[fastForwardTime]).then(function () {
+          return Helpers.sendPromise('evm_mine', web3,[]).then(function () {
+    
+          });
+        });
+    });
+
+
+    it('reveal vote', async function() {
+
+        const votingContract = await new web3.eth.Contract(contract_abi.json.BBVoting.abi, dataJson.VOTING.address, {
+              from: accounts[0]
+          });
+  
+          await votingContract.methods.revealVote(poll_ID, 1, 123).send({from : accounts[3]});
+          await votingContract.methods.revealVote(poll_ID, 0, 123).send({from : accounts[4]});
+
+          let data = await watcherTest.getLatestBlockNumber('BBVoting','VoteRevealed');
+          let result = await watcherTest.getDataOnNetWork('BBVoting','VoteRevealed',dataJson.VOTING.address, data.blockNumber);
+  
+          let lastBlock = result[result.length - 1];
+      
+          assert(data.pollID, lastBlock.returnValues.pollID);    
+  
+      }); 
+
+      it("fast forward to 24h", function () {
+        var fastForwardTime = 24 * 3600 * 1 + 1;
+        return Helpers.sendPromise('evm_increaseTime', web3,[fastForwardTime]).then(function () {
+          return Helpers.sendPromise('evm_mine', web3,[]).then(function () {
+    
+          });
+        });
+    });
+
+    it('finalizePoll', async function() {
+
+        const disputeContract = await new web3.eth.Contract(contract_abi.json.BBDispute.abi, dataJson.DISPUTE.address, {
+            from: accounts[0]
+        });
+  
+        await disputeContract.methods.finalizeDispute(jobID_2).send({from : accounts[1]});
+
+        let data = await watcherTest.getLatestBlockNumber('BBDispute','DisputeFinalized');
+        let result = await watcherTest.getDataOnNetWork('BBDispute','DisputeFinalized',dataJson.DISPUTE.address, data.blockNumber);
+
+        let lastBlock = result[result.length - 1];
+        
+        assert(data.jobID, lastBlock.returnValues.jobID);
+          
+  
       });
+      
+      it('withdrawVotingRights', async function() {
+
+        const votingContract = await new web3.eth.Contract(contract_abi.json.BBVoting.abi, dataJson.VOTING.address, {
+              from: accounts[0]
+          });
+  
+          await votingContract.methods.withdrawVotingRights(1000).send({from : accounts[3]});
+          await votingContract.methods.withdrawVotingRights(2000).send({from : accounts[4]});
+          
+          let data = await watcherTest.getLatestBlockNumber('BBVoting','VotingRightsWithdrawn');
+          let result = await watcherTest.getDataOnNetWork('BBVoting','VotingRightsWithdrawn',dataJson.VOTING.address, data.blockNumber);
+  
+          let lastBlock = result[result.length - 1];
+      
+          assert(data.numTokens, lastBlock.returnValues.numTokens);
+  
+  
+      }); 
+
+      it('updateDispute', async function() {
+
+        const disputeContract = await new web3.eth.Contract(contract_abi.json.BBDispute.abi, dataJson.DISPUTE.address, {
+            from: accounts[0]
+        });
+  
+        await disputeContract.methods.updateDispute(jobID_3, false).send({from : accounts[1]});
+
+        let data = await watcherTest.getLatestBlockNumber('BBDispute','DisputeUpdated');
+        let result = await watcherTest.getDataOnNetWork('BBDispute','DisputeUpdated',dataJson.DISPUTE.address, data.blockNumber);
+
+        let lastBlock = result[result.length - 1];
+        
+        assert(data.jobID, lastBlock.returnValues.jobID);
+          
+  
+      });
+
 
 });
