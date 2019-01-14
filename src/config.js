@@ -9,6 +9,7 @@ const BBParams_json = require('./json/BBParams')
 const BBOTest_json = require('./json/BBOTest');
 const BBStorage_json = require('./json/BBStorage');
 const ProxyFactory_json = require('./json/UpgradeabilityProxyFactory');
+const BBWrap_json = require('./json/BBWrap');
 
 
 module.exports =  {
@@ -24,6 +25,7 @@ module.exports =  {
 		BBParams : BBParams_json,
 		BBVoting : BBVoting_json,
 		BBDispute : BBDispute_json,
+		BBWrap : BBWrap_json,
 	},
 	ropsten :  {
 		BBO : {
@@ -52,10 +54,15 @@ module.exports =  {
         },
         BBParams: {
             address: '0xc0647055b50dce8751908bfbd7f1d219ed592d6f',
-        },
+		},
+		BBWrap : {
+			address: '0x989b371d7a936ed32bf2d92e6f5131171f8dbd0a',
+		}
 	},
-	tomo : {
-
+	rinkeby : {
+		BBWrap : {
+			address: '0xfe01e2c1ee0014c36a87d08f5951c8ea1a8e4b92',
+		}
 	},
 	main : {
 

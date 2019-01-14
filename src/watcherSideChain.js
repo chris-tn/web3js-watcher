@@ -1,22 +1,17 @@
 const Web3 = require('web3')
 const contract_config = require('./config')
 
-var admin = require("firebase-admin");
-var serviceAccount = require("./keys/serviceAccountKey.json");
+const INFURA_WS_URL = 'https://rinkeby.infura.io/'
+const NFURA_WS_URL ="wss://rinkeby.infura.io/ws"
 
-const FIREBASE_DB_URL = 'https://mrtoken-619a5.firebaseio.com'
-const INFURA_WS_URL = 'https://ropsten.infura.io/'
-const NFURA_WS_URL ="wss://ropsten.infura.io/ws"
+var actionSideChain = require('./sideChain/actionSideChain');
 
-var actionSideChain = require('../src/sideChain/actionSideChain');
-
-var db = {};
+var db = {}
 
 setDataBase = (dataBase) => {
   db = dataBase;
   actionSideChain.setDataBase(db);
 }
-
 
 writeEventListData = (col, datas) => {
   if(datas.length ==0)
@@ -28,6 +23,13 @@ writeEventListData = (col, datas) => {
 
 writeEventData = (col, txHash, data) => {
   db.ref(col+ '/' + txHash).set(data);
+}
+
+updateMintTokenDone = (txHash)  => {
+  console.log('update mintStage to 1');
+  db.ref('BBWrap/DepositEther/' + txHash).update({
+      mintStage : 2,
+  });
 }
 
 
@@ -72,11 +74,8 @@ watchEvent = (contractName, eventName, network) => {
       let data = event.returnValues;
       data.blockNumber = event.blockNumber;
       data.txHash = event.transactionHash;
-      data.mintStage = 0;
       writeEventData(contractName + '/' + eventName, event.transactionHash, data);
       if(contractName == 'BBWrap' && eventName == 'DepositEther') {
-        actionSideChain.mintToken('BBWrap/DepositEther');
-      } else if(contractName == 'BBWrap' && eventName == 'MintToken') {
         actionSideChain.mintToken('BBWrap/DepositEther');
       }
   })
@@ -126,5 +125,5 @@ module.exports = {
   watchEvent,
   writeEventData, 
   getPastEvents,
-  setDataBase
+  setDataBase,
 }
