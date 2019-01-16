@@ -46,24 +46,3 @@ npm start BBO Transfer
 
 `BBO` is contract Name have config in ./src/abi/config
 `Transfer` is event Name
-
-## Test Local 
-
-Open 4 windows Terminal 
-
-```
-npm run testrpc
-```
-
-```
- npm run deploytest
-```
-
-```
-npm run watch
-```
-
-```
-npm run test
-```
-
