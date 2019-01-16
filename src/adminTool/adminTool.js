@@ -1,5 +1,5 @@
-var wrapContract = require('./mainChain/wrapContract');
-var wrapContractSideChain = require('./sideChain/wrapContractSideChain');
+var wrapContract = require('../mainChain/wrapContract');
+var wrapContractSideChain = require('../sideChain/wrapContractSideChain');
 
 
 let tokenBBC_Address_SideChain = '0xdfb70120219f0ca286cf31fb88c3cbcd44343b65';

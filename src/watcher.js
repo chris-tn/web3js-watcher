@@ -62,13 +62,13 @@ watchEvent = (contractName, eventName, network) => {
   })
   .on('data', function(event){
       
-      console.log(contractName + ' ' + eventName + ' at ' + new Date() + ' line 70 txHash ->  ' + event.transactionHash); 
+      console.log(contractName + ' ' + eventName + ' at ' + new Date() + ' txHash ->  ' + event.transactionHash); 
 
       let data = event.returnValues;
       data.blockNumber = event.blockNumber;
       data.txHash = event.transactionHash;
       data.mintStage = 0;
-      writeEventData(contractName + '/' + eventName, event.transactionHash, data);
+      writeEventData(network + '/' + contractName + '/' + eventName, event.transactionHash, data);
 
       let objSwap = JSON.parse(process.env.TOKEN_SWAP);
 
@@ -77,7 +77,7 @@ watchEvent = (contractName, eventName, network) => {
           if(keyToken === undefined || keyToken == '') {
             console.log('error : process.env.TOKEN_SWAP.ETHER');
           } else {
-            actionSideChain.mintToken('BBWrap/DepositEther', keyToken);
+            actionSideChain.mintToken(network + '/BBWrap/DepositEther', keyToken);
           }
       } else if(contractName == 'BBWrap' && eventName == 'DepositToken') {
           let token = data.token.toLowerCase();
@@ -86,11 +86,9 @@ watchEvent = (contractName, eventName, network) => {
           if(keyToken === undefined || keyToken == '') {
             console.log('error : process.env.TOKEN_SWAP.TOKEN. ',token);
           } else {
-            actionSideChain.mintToken('BBWrap/DepositToken', keyToken);
+            actionSideChain.mintToken(network +'/BBWrap/DepositToken', keyToken);
           }
-      } else if(contractName == 'BBWrap' && eventName == 'MintToken') {
-          actionSideChain.mintToken('BBWrap/DepositEther');
-      }
+      } 
   })
   .on('changed', function(event){
       // remove event from local database
