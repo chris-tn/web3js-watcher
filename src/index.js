@@ -11,6 +11,9 @@ if(process.argv[2]){
 if(process.argv[3]){
 	eventName = process.argv[3]
 }
-console.log('Starting watching eventName ' + eventName + ' from '+ contractName)
-watcher.watchEvent(contractName, eventName)
-watcher.getPastEvents(contractName, eventName)
+if(process.argv[4]){
+	network = process.argv[4]
+}
+console.log('Starting watching eventName ' + eventName + ' from '+ contractName + ' on network '+ network)
+watcher.watchEvent(contractName, eventName, network)
+watcher.getPastEvents(contractName, eventName, network)

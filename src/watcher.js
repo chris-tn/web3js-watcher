@@ -35,15 +35,28 @@ getLatestBlock = (col, callback) => {
   })
 }
 
-watchEvent = (contractName, eventName) => {
+handleDisconnects = (e, contractName, eventName, network) => {
+  console.log("error",e);
+  setTimeout(() => watchEvent(contractName, eventName), 5000);
+}
+
+watchEvent = (contractName, eventName, network) => {
   // Instantiate web3 with WebSocketProvider
-  const web3 = new Web3(new Web3.providers.WebsocketProvider(process.env.INFURA_WS_URL))
+  const eventProvider = new Web3.providers.WebsocketProvider(contract_abi['WS_URL'][network]);
+  const web3 = new Web3()
+  
+  //listen for disconnects
+  eventProvider.on('error', e => handleDisconnects(e,contractName, eventName, network));
+  eventProvider.on('end', e => handleDisconnects(e,contractName, eventName, network))
+
+  web3.setProvider(eventProvider);
+
   if(!contract_abi[contractName])
     return
   // Instantiate token contract object with JSON ABI and address
 
   const tokenContract = new web3.eth.Contract(
-    contract_abi[contractName].abi,contract_abi[contractName].address,
+    contract_abi[contractName].abi,contract_abi[contractName][network],
     (error, result) => { if (error) console.log(error) }
   )
   let options = {
@@ -57,16 +70,16 @@ watchEvent = (contractName, eventName) => {
       let data = event.returnValues
       data.blockNumber = event.blockNumber
       data.txHash = event.transactionHash
-      writeEventData(contractName + '/' + eventName, event.transactionHash, data)
+      writeEventData(network+ '/'+contractName + '/' + eventName, event.transactionHash, data)
   })
   .on('changed', function(event){
       // remove event from local database
   })
   .on('error', console.error);
 }
-getPastEvents = (contractName, eventName) => {
+getPastEvents = (contractName, eventName, network) => {
   // Instantiate web3 with WebSocketProvider
-  const web3 = new Web3(new Web3.providers.HttpProvider(process.env.INFURA_URL))
+  const web3 = new Web3(new Web3.providers.HttpProvider(contract_abi['HTTP_URL'][network]))
 
   // Instantiate token contract object with JSON ABI and address
 
@@ -74,10 +87,10 @@ getPastEvents = (contractName, eventName) => {
     return
   //todo
   const tokenContract = new web3.eth.Contract(
-    contract_abi[contractName].abi,contract_abi[contractName].address,
+    contract_abi[contractName].abi,contract_abi[contractName][network],
     (error, result) => { if (error) console.log(error) }
   )
-  return getLatestBlock(contractName + '/' + eventName, function(blockNumber){
+  return getLatestBlock(network+ '/'+ contractName + '/' + eventName, function(blockNumber){
     if(!parseFloat(blockNumber)) return;
     // todo get latest block from firebase
     let options = {
@@ -93,7 +106,7 @@ getPastEvents = (contractName, eventName) => {
           data.txHash = events[i].transactionHash
           datas.push(data)
         }
-        return writeEventListData(contractName + '/' + eventName, datas);
+        return writeEventListData(network+ '/'+ contractName + '/' + eventName, datas);
     });
   })
   
