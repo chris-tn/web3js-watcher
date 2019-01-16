@@ -10,7 +10,7 @@ const BBOTest_json = require('./json/BBOTest');
 const BBStorage_json = require('./json/BBStorage');
 const ProxyFactory_json = require('./json/UpgradeabilityProxyFactory');
 const BBWrap_json = require('./json/BBWrap');
-
+const TokenSideChain_json = require('./json/TokenSideChain');
 
 module.exports =  {
 	json : {
@@ -26,6 +26,7 @@ module.exports =  {
 		BBVoting : BBVoting_json,
 		BBDispute : BBDispute_json,
 		BBWrap : BBWrap_json,
+		TokenSideChain : TokenSideChain_json
 	},
 	ropsten :  {
 		BBO : {
@@ -62,6 +63,9 @@ module.exports =  {
 	rinkeby : {
 		BBWrap : {
 			address: '0xfe01e2c1ee0014c36a87d08f5951c8ea1a8e4b92',
+		},
+		TokenSideChain : {
+			address : '0x5e53ba3ef3fe815a814e1c5c5e870fa8ce553e0e'
 		}
 	},
 	main : {

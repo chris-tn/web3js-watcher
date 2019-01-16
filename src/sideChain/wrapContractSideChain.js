@@ -1,38 +1,35 @@
 const Web3 = require('web3')
 const contract_config = require('../config')
 
+require('../env');
 
-const INFURA_HTTP_URL = 'https://rinkeby.infura.io/'
+ 
 
-const privatekey = '0xe192c3eb953d2167e1ac6b61989cc03492e8f6d416c236efe1d3f571e58e453c';
-const web3 = new Web3(new Web3.providers.HttpProvider(INFURA_HTTP_URL))
-
-const CONTRACT_ADDRESS = '0xfe01e2c1ee0014c36a87d08f5951c8ea1a8e4b92';
-const adminAdress = '0xAB8C9E08ec13B7c91210A68b08AFD382da99eaC1';
+const web3 = new Web3(new Web3.providers.HttpProvider(process.env.INFURA_HTTP_URL_SIDECHAIN))
 
 
-adminSetToken =  async  (tokenAddress, tokenKey) => {
+adminSetToken =  async  (tokenAddress, tokenKey, gas, gasPrice) => {
     let wrapContract = new web3.eth.Contract(
-        contract_config.json['BBWrap'].abi,contract_config['ropsten']['BBWrap'].address,
+        contract_config.json['BBWrap'].abi, process.env.CONTRACT_ADDRESS_SIDECHAIN,
         (error, result) => { if (error) console.log(error) })
     
-    var query = await wrapContract.methods.setToken(tokenAddress,web3.utils.toHex(tokenKey));
+    var query = await wrapContract.methods.setToken(tokenAddress, web3.utils.toHex(tokenKey));
     var encodedABI = query.encodeABI();
       
     var nonce = '0';
-    web3.eth.getTransactionCount(adminAdress).then(_nonce => {
+    web3.eth.getTransactionCount(process.env.ADMIN_SIDECHAIN_ADDRRESS).then(_nonce => {
         nonce = _nonce.toString(16);
         console.log('nonce '+ nonce);
      
         var tx = {
-            from: adminAdress,
-            to: CONTRACT_ADDRESS,
+            from: process.env.ADMIN_SIDECHAIN_ADDRRESS,
+            to: process.env.CONTRACT_ADDRESS_SIDECHAIN,
             data: encodedABI,
-            gas: 2000000,
-            gasPrice : web3.utils.toWei('10','gwei'),
+            gas: gas,
+            gasPrice : web3.utils.toWei(gasPrice,'gwei'),
             nonce: '0x' + nonce,
         };
-        web3.eth.accounts.signTransaction(tx, privatekey).then(signed => {
+        web3.eth.accounts.signTransaction(tx, process.env.PRIVATEKEY_ADMIN_SIDECHAIN).then(signed => {
     
             web3.eth.sendSignedTransaction(signed.rawTransaction)
                   .on('confirmation', (confirmationNumber, receipt) => {
@@ -52,7 +49,7 @@ adminSetToken =  async  (tokenAddress, tokenKey) => {
         
 }
 
-addAdmin =  async  (privatekey, ownerAddress ,adminAddress) => {
+addAdmin =  async  (privatekey, ownerAddress ,adminAddress, gas, gasPrice) => {
     let wrapContract = new web3.eth.Contract(
         contract_config.json['BBWrap'].abi,contract_config['ropsten']['BBWrap'].address,
         (error, result) => { if (error) console.log(error) })
@@ -67,10 +64,10 @@ addAdmin =  async  (privatekey, ownerAddress ,adminAddress) => {
      
         var tx = {
             from: ownerAddress,
-            to: CONTRACT_ADDRESS,
+            to: process.env.CONTRACT_ADDRESS_SIDECHAIN,
             data: encodedABI,
-            gas: 2000000,
-            gasPrice : web3.utils.toWei('10','gwei'),
+            gas: gas,
+            gasPrice : web3.utils.toWei(gasPrice,'gwei'),
             nonce: '0x' + nonce,
         };
         web3.eth.accounts.signTransaction(tx, privatekey).then(signed => {
@@ -96,9 +93,9 @@ addAdmin =  async  (privatekey, ownerAddress ,adminAddress) => {
 }
 
 
-mintToken = async  (contractAddress ,receiverAddress, tokenKey, value, txHash) => {
+mintToken = async  (receiverAddress, tokenKey, value, txHash, gas, gasPrice) => {
     let wrapContract = new web3.eth.Contract(
-        contract_config.json['BBWrap'].abi, contractAddress,
+        contract_config.json['BBWrap'].abi, process.env.CONTRACT_ADDRESS_SIDECHAIN,
         (error, result) => { if (error) console.log(error) })
     
     var query = await wrapContract.methods.mintToken(receiverAddress, value, web3.utils.toHex(tokenKey), txHash);
@@ -108,19 +105,19 @@ mintToken = async  (contractAddress ,receiverAddress, tokenKey, value, txHash) =
 
      return new Promise( function (resolve, reject) {
 
-        web3.eth.getTransactionCount(adminAdress).then(_nonce => {
+        web3.eth.getTransactionCount(process.env.ADMIN_SIDECHAIN_ADDRRESS).then(_nonce => {
             nonce = _nonce.toString(16);
             console.log('nonce '+ nonce);
          
             var tx = {
-                from: adminAdress,
-                to: contractAddress,
+                from: process.env.ADMIN_SIDECHAIN_ADDRRESS,
+                to: process.env.CONTRACT_ADDRESS_SIDECHAIN,
                 data: encodedABI,
-                gas: 2000000,
-                gasPrice : web3.utils.toWei('1','gwei'),
+                gas: gas,
+                gasPrice : web3.utils.toWei(gasPrice,'gwei'),
                 nonce: '0x' + nonce,
             };
-            web3.eth.accounts.signTransaction(tx, privatekey).then(signed => {
+            web3.eth.accounts.signTransaction(tx, process.env.PRIVATEKEY_ADMIN_SIDECHAIN).then(signed => {
         
                 web3.eth.sendSignedTransaction(signed.rawTransaction).then((receipt) =>{
                     resolve({code : 1, data : receipt ,msg : 'success'});
@@ -139,12 +136,12 @@ mintToken = async  (contractAddress ,receiverAddress, tokenKey, value, txHash) =
 }
 
 
-approveToken = async  (privatekey, ownerAddress ,tokenAddress, contractAddress) => {
+approveToken = async  (privatekey, ownerAddress ,tokenAddress, contractAddress, gas, gasPrice, approveValue) => {
     let wrapContract = new web3.eth.Contract(
         contract_config.json['BBOTest'].abi, tokenAddress,
         (error, result) => { if (error) console.log(error) })
     
-    var query = await wrapContract.methods.approve(contractAddress, '10000000000000000000');
+    var query = await wrapContract.methods.approve(contractAddress, approveValue);
     var encodedABI = query.encodeABI();
       
     var nonce = '0';
@@ -159,8 +156,8 @@ approveToken = async  (privatekey, ownerAddress ,tokenAddress, contractAddress) 
                 from: ownerAddress,
                 to: tokenAddress,
                 data: encodedABI,
-                gas: 2000000,
-                gasPrice : web3.utils.toWei('1','gwei'),
+                gas: gas,
+                gasPrice : web3.utils.toWei(gasPrice,'gwei'),
                 nonce: '0x' + nonce,
             };
             web3.eth.accounts.signTransaction(tx, privatekey).then(signed => {
@@ -177,7 +174,86 @@ approveToken = async  (privatekey, ownerAddress ,tokenAddress, contractAddress) 
             });
      });   
 
-  
+        
+}
+
+
+tokenTransferOwnership = async  (privatekey, ownerAddress ,tokenAddress, contractAddress, gas, gasPrice) => {
+    let wrapContract = new web3.eth.Contract(
+        contract_config.json['TokenSideChain'].abi, tokenAddress,
+        (error, result) => { if (error) console.log(error) })
+    
+    var query = await wrapContract.methods.transferOwnership(contractAddress);
+    var encodedABI = query.encodeABI();
+      
+    var nonce = '0';
+
+     return new Promise( function (resolve, reject) {
+
+        web3.eth.getTransactionCount(ownerAddress).then(_nonce => {
+            nonce = _nonce.toString(16);
+            console.log('nonce '+ nonce);
+         
+            var tx = {
+                from: ownerAddress,
+                to: tokenAddress,
+                data: encodedABI,
+                gas: gas,
+                gasPrice : web3.utils.toWei(gasPrice,'gwei'),
+                nonce: '0x' + nonce,
+            };
+            web3.eth.accounts.signTransaction(tx, privatekey).then(signed => {
+        
+                web3.eth.sendSignedTransaction(signed.rawTransaction).then((receipt) =>{
+                    resolve({code : 1, data : receipt ,msg : 'success'});
+                 }, (error) =>{
+                    resolve({code : -1, data : error ,msg : 'error'});
+                  });
+                      
+                  });
+                
+            });
+     });   
+       
+}
+
+
+depositToken = async  (privatekey, ownerAddress ,tokenAddress, amount , gas, gasPrice) => {
+    let wrapContract = new web3.eth.Contract(
+        contract_config.json['BBWrap'].abi, process.env.CONTRACT_ADDRESS_SIDECHAIN,
+        (error, result) => { if (error) console.log(error) })
+    
+    var query = await wrapContract.methods.depositToken(tokenAddress, web3.utils.toWei(amount,'ether'));
+    var encodedABI = query.encodeABI();
+      
+    var nonce = '0';
+
+     return new Promise( function (resolve, reject) {
+
+        web3.eth.getTransactionCount(ownerAddress).then(_nonce => {
+            nonce = _nonce.toString(16);
+            console.log('nonce '+ nonce);
+         
+            var tx = {
+                from: ownerAddress,
+                to: process.env.CONTRACT_ADDRESS_SIDECHAIN,
+                data: encodedABI,
+                gas: gas,
+                gasPrice : web3.utils.toWei(gasPrice,'gwei'),
+                nonce: '0x' + nonce,
+            };
+            web3.eth.accounts.signTransaction(tx, privatekey).then(signed => {
+        
+                web3.eth.sendSignedTransaction(signed.rawTransaction).then((receipt) =>{
+                    resolve({code : 1, data : receipt ,msg : 'success'});
+                 }, (error) =>{
+                    resolve({code : -1, data : error ,msg : 'error'});
+                  });
+                      
+                  });
+                
+            });
+     });   
         
 }
 
@@ -187,5 +263,6 @@ module.exports = {
     adminSetToken,
     addAdmin,
     mintToken,
-    approveToken
+    approveToken,
+    tokenTransferOwnership
 }

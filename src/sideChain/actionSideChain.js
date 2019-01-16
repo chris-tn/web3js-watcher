@@ -2,9 +2,6 @@
 
 var wrapSideChain = require('./wrapContractSideChain');
 
-const CONTRACT_ADDRESS = '0xfe01e2c1ee0014c36a87d08f5951c8ea1a8e4b92';
-const adminAdress = '0xAB8C9E08ec13B7c91210A68b08AFD382da99eaC1';
-
 
 var db = {};
 
@@ -25,26 +22,38 @@ setDataBase = (database) => {
     db = database;
 } 
 
-updateMintTokenStatge = (txHash, value)  => {
-    console.log('update mintStage to 1');
-    db.ref('BBWrap/DepositEther/' + txHash).update({
+updateMintTokenStatge = (col, txHash ,value)  => {
+    console.log('update mintStage to ',value);
+    db.ref(col + '/' + txHash).update({
         mintStage : value,
     });
 }
 
-mintToken = (col) => {
+setMintTokenHash = (col, txHash ,value)  => {
+    db.ref(col + '/' + txHash).update({
+        mintTokenHash : value,
+    });
+}
+
+mintToken = (col, tokenKey) => {
     console.log('get Latest Block From ' + col);
     getLatestBlockFireBase(col, function(data) {
         console.log(data);
-        updateMintTokenStatge(data.txHash, 1);
-        wrapSideChain.mintToken(CONTRACT_ADDRESS, data.sender, 'BETH','9000000000000000000', data.txHash).then(function(rs) {
-            if(rs.code == 1) {
-                updateMintTokenStatge(data.txHash, 2);
-                console.log('Mint token ' + rs.msg + ' at txHash => ' + rs.data.transactionHash);
-            } else {
-                console.log('Mint token error');
-            }
-        });
+        if(data.mintStage == 0) {
+            updateMintTokenStatge(col, data.txHash, 1);
+            
+            wrapSideChain.mintToken(data.sender, tokenKey, data.value, data.txHash, 2000000, '10').then(function(rs) {
+                if(rs.code == 1) {
+                    updateMintTokenStatge(col, data.txHash, 2);
+                    setMintTokenHash(col, data.txHash, rs.data.transactionHash);
+                    console.log('Mint token  ' + rs.msg + ' at txHash => ' + rs.data.transactionHash);
+                } else {
+                    console.log('Mint token error');
+                }
+            });
+        } else {
+            console.log('mintStage should be =  0');
+        }
     });
 }
 
