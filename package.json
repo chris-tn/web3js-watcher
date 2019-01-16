@@ -3,8 +3,15 @@
   "version": "1.0.0",
   "description": "Node js watching events logs and save to Firebase",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "test": "mocha",
+    "testrpc": "testrpc-sc --gasLimit 0xfffffffffff --gasPrice 0x01 --network-id 777 -p 8545",
+    "deploytest" : "node testHelper/initContract.js",
+    "watch" : "node testHelper/startWatcher.js"
   },
   "keywords": [],
   "author": "Chris Nguyen <ksmanhtuong103@gmail.com>",
@@ -13,6 +20,21 @@
     "decimal.js": "^7.2.4",
     "dotenv-safe": "^4.0.3",
     "firebase-admin": "^6.3.0",
-    "web3": "^1.0.0-beta.34"
+    "web3": "^1.0.0-beta.34",
+    "abi-decoder": "^1.2.0",
+    "bignumber.js": "^7.2.1",
+    "ethereumjs-abi": "^0.6.5",
+    "ganache-cli": "^6.1.6",
+    "ipfs-api": "^22.2.1",
+    "solc": "^0.4.24",
+    "truffle": "^4.1.13",
+    "truffle-hdwallet-provider-privkey": "^0.2.0"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.2",
+    "eth-gas-reporter": "^0.1.12",
+    "sol-merger": "^0.1.2",
+    "solidity-coverage": "^0.5.5",
+    "mocha": "^5.2.0"
   }
 }

@@ -1,18 +1,17 @@
 const Web3 = require('web3')
 const contract_config = require('./config')
 
+const INFURA_WS_URL = 'https://rinkeby.infura.io/'
+const NFURA_WS_URL ="wss://rinkeby.infura.io/ws"
 
-require('./env')
+var actionSideChain = require('./sideChain/actionSideChain');
 
-var actionSideChain = require('../src/sideChain/actionSideChain');
-
-var db = {};
+var db = {}
 
 setDataBase = (dataBase) => {
   db = dataBase;
   actionSideChain.setDataBase(db);
 }
-
 
 writeEventListData = (col, datas) => {
   if(datas.length ==0)
@@ -24,6 +23,13 @@ writeEventListData = (col, datas) => {
 
 writeEventData = (col, txHash, data) => {
   db.ref(col+ '/' + txHash).set(data);
+}
+
+updateMintTokenDone = (txHash)  => {
+  console.log('update mintStage to 1');
+  db.ref('BBWrap/DepositEther/' + txHash).update({
+      mintStage : 2,
+  });
 }
 
 
@@ -42,7 +48,7 @@ getLatestBlock = (col, callback) => {
 
 watchEvent = (contractName, eventName, network) => {
   // Instantiate web3 with WebSocketProvider
-  const web3 = new Web3(new Web3.providers.WebsocketProvider(process.env.INFURA_WS_URL))
+  const web3 = new Web3(new Web3.providers.WebsocketProvider(NFURA_WS_URL))
   if(!contract_config[network][contractName])
     return
   // Instantiate token contract object with JSON ABI and address
@@ -58,6 +64,7 @@ watchEvent = (contractName, eventName, network) => {
       if(error) {
         console.log('error', error);
       } else {
+        //console.log(contractName + ' ' + eventName + ' at ' + new Date() + ' txHash -> line 61 ' + event.returnValues.txHash); 
       }
   })
   .on('data', function(event){
@@ -67,29 +74,9 @@ watchEvent = (contractName, eventName, network) => {
       let data = event.returnValues;
       data.blockNumber = event.blockNumber;
       data.txHash = event.transactionHash;
-      data.mintStage = 0;
       writeEventData(contractName + '/' + eventName, event.transactionHash, data);
-
-      let objSwap = JSON.parse(process.env.TOKEN_SWAP);
-
       if(contractName == 'BBWrap' && eventName == 'DepositEther') {
-          let keyToken = objSwap.ETHER;
-          if(keyToken === undefined || keyToken == '') {
-            console.log('error : process.env.TOKEN_SWAP.ETHER');
-          } else {
-            actionSideChain.mintToken('BBWrap/DepositEther', keyToken);
-          }
-      } else if(contractName == 'BBWrap' && eventName == 'DepositToken') {
-          let token = data.token.toLowerCase();
-          
-          let keyToken = objSwap.TOKEN[token];
-          if(keyToken === undefined || keyToken == '') {
-            console.log('error : process.env.TOKEN_SWAP.TOKEN. ',token);
-          } else {
-            actionSideChain.mintToken('BBWrap/DepositToken', keyToken);
-          }
-      } else if(contractName == 'BBWrap' && eventName == 'MintToken') {
-          actionSideChain.mintToken('BBWrap/DepositEther');
+        actionSideChain.mintToken('BBWrap/DepositEther');
       }
   })
   .on('changed', function(event){
@@ -138,5 +125,5 @@ module.exports = {
   watchEvent,
   writeEventData, 
   getPastEvents,
-  setDataBase
+  setDataBase,
 }
