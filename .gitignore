@@ -55,13 +55,3 @@ jspm_packages
 #Notepad ++ backup 
 nppBackup
 *.bak
-src/.DS_Store
-src/abi/ropsten/.DS_Store
-src/abi/.DS_Store
-src/.DS_Store
-.DS_Store
-.DS_Store
-package-lock.json
-allFiredEvents
-.DS_Store
-test/contractAddress.json
