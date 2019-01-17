@@ -16,10 +16,20 @@ admin.initializeApp({
 var db = admin.database();
 
 let col = 'ropsten/BBWrap/DepositEther/';
-let txID = '0xcad8ef8226d4bdb977ce5ad33d159c98c978f60e50e27a197a366699b3592440';
+let txID = '0xcad8ef8226d4bdb977ce5ad33d159c98c978f60e51e27a197a366699b3592440';
 let status = 0;
 
 handleTx.updateStatus(db, col, txID, status);
+
+let contractName = 'BBWrap';
+let eventName = 'DepositEther';
+let network = 'ropsten';
+
+handleTx.listenFirebaseDB(db, contractName, eventName, network, function(data) {
+    console.log('New Data ', data);
+});
+
+
 
 let receiverAddress = '0x75A426f8136891afe4244347CE6931f5826E5Cc7';
 let txHash = '0xcad8ef8226d4bdb977ce5ad33d159c98c978f60e50e27a197a366699b3592940';

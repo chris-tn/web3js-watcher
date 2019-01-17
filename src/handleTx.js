@@ -2,7 +2,13 @@
 require('./env');
 
 
-listenFirebaseDB = (contractName, eventName, network) => {
+listenFirebaseDB = (db, contractName, eventName, network, callback) => {
+    let col = network + '/' + contractName + '/' + eventName + '/' ;
+    console.log('listenFirebaseDB at : ',col);
+    let ref = db.ref(col);
+    ref.on("child_changed", function(snapshot) {
+        callback (snapshot.val());
+    });
 
 }
 
