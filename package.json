@@ -13,6 +13,6 @@
     "decimal.js": "^7.2.4",
     "dotenv-safe": "^4.0.3",
     "firebase-admin": "^6.3.0",
-    "web3": "^1.0.0-beta.34"
+    "web3": "^1.0.0-beta.33"
   }
 }
