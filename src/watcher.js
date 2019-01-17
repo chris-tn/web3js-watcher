@@ -9,7 +9,8 @@ admin.initializeApp({
   databaseURL: process.env.FIREBASE_DB_URL
 });
 var db = admin.database();
-
+var web3; 
+var inter;
 writeEventListData = (col, datas) => {
   if(datas.length ==0)
     return
@@ -36,23 +37,47 @@ getLatestBlock = (col, callback) => {
 }
 
 handleDisconnects = (e, contractName, eventName, network) => {
-  console.log("error",e);
-  setTimeout(() => watchEvent(contractName, eventName), 5000);
+  console.log(" -- handleDisconnects -- ",);
+  clearInterval(inter);
+  initWeb3(contractName, eventName, network);
+  //
+  console.log('wait for connection connected')
+  setTimeout(() => {
+    getPastEvents(contractName, eventName, network)
+    watchEvent(contractName, eventName, network)
+  }, 5000);
 }
 
-watchEvent = (contractName, eventName, network) => {
-  // Instantiate web3 with WebSocketProvider
-  const eventProvider = new Web3.providers.WebsocketProvider(contract_abi['WS_URL'][network]);
-  const web3 = new Web3()
+
+initWeb3 =  (contractName, eventName, network) => {
+  let eventProvider = new Web3.providers.WebsocketProvider(contract_abi['WS_URL'][network]);
+  
   
   //listen for disconnects
-  eventProvider.on('error', e => handleDisconnects(e,contractName, eventName, network));
+  eventProvider.on('error', e => handleDisconnects('error',contractName, eventName, network));
   eventProvider.on('end', e => handleDisconnects(e,contractName, eventName, network))
-
+  web3 = new Web3();
   web3.setProvider(eventProvider);
 
+}
+watchEvent = (contractName, eventName, network) => {
   if(!contract_abi[contractName])
     return
+  if(!web3 || !web3.currentProvider){
+    initWeb3(contractName, eventName, network);
+  }
+  inter = setInterval(()=> {
+    
+    console.log('ws connection state: ',web3.currentProvider.connection.readyState);
+    if(web3.currentProvider.connection.readyState == 1){
+      web3.eth.getBlockNumber().then(function(r){
+        console.log('latestBlock: ',r);
+      })
+    }
+    
+  }, 1000);
+
+ 
   // Instantiate token contract object with JSON ABI and address
 
   const tokenContract = new web3.eth.Contract(
@@ -73,9 +98,13 @@ watchEvent = (contractName, eventName, network) => {
       writeEventData(network+ '/'+contractName + '/' + eventName, event.transactionHash, data)
   })
   .on('changed', function(event){
-      // remove event from local database
+      console.log('removed...')
+      handleDisconnects(e,contractName, eventName, network)
   })
-  .on('error', console.error);
+  .on('error', ()=>{
+    handleDisconnects('error event',contractName, eventName, network)
+  })
+
 }
 getPastEvents = (contractName, eventName, network) => {
   // Instantiate web3 with WebSocketProvider
