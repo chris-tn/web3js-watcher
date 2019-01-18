@@ -15,10 +15,6 @@ if(process.argv[4]){
 	network = process.argv[4]
 }
 
-if(process.argv[5]){
-	network2 = process.argv[5]
-}
-
 console.log('Starting watching eventName ' + eventName + ' from '+ contractName + ' on network '+ network)
 watcher.watchEvent(contractName, eventName, network)
 watcher.getPastEvents(contractName, eventName, network)
