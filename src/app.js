@@ -1,6 +1,6 @@
 require('./env')
 
-const watcher = require('./watcher')
+const watcherFireBase = require('./watcherFireBase');
 
 console.log(process.argv)
 var contractName, eventName;
@@ -19,6 +19,6 @@ if(process.argv[5]){
 	network2 = process.argv[5]
 }
 
-console.log('Starting watching eventName ' + eventName + ' from '+ contractName + ' on network '+ network)
-watcher.watchEvent(contractName, eventName, network)
-watcher.getPastEvents(contractName, eventName, network)
+console.log('Watching from FireBase...');
+
+watcherFireBase.watchEvent(contractName, eventName, network, network2);

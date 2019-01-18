@@ -4,7 +4,8 @@
   "description": "Node js watching events logs and save to Firebase",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "watch": "node src/app.js"
   },
   "keywords": [],
   "author": "Chris Nguyen <ksmanhtuong103@gmail.com>",
