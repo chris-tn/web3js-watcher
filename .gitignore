@@ -57,3 +57,5 @@ nppBackup
 *.bak
 .DS_Store
 .env.example
+.DS_Store
+package-lock.json
