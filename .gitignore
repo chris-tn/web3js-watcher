@@ -1,3 +1,5 @@
+functions/.runtimeconfig.json
+functions/serviceAccountKey.json
 server/log/
 #Node js files that occasionally popup
 *.node-xmlhttprequest*
