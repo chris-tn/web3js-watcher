@@ -1,0 +1,24 @@
+{
+  "bbwrap": {
+    "address": "0xfe01e2c1ee0014c36a87d08f5951c8ea1a8e4b92",
+    "addressMain" : "0x989b371d7a936ed32BF2d92e6f5131171F8dBd0A",
+    "dbnetwork": "ropsten",
+    "gasprice": "1",
+    "tokenname": "ETH",
+    "gas": "150000",
+    "pkey": "0xe192c3eb953d2167e1ac6b61989cc03492e8f6d416c236efe1d3f571e58e453c",
+    "network": "rinkeby",
+    "sender": "0xAB8C9E08ec13B7c91210A68b08AFD382da99eaC1",
+    "rpcMain": "https://ropsten.infura.io/CUNjkZ8qg6WZHqeFNJyL",
+    "rpc": "https://rinkeby.infura.io/CUNjkZ8qg6WZHqeFNJyL",
+    "dbinstance": "mrtoken-619a5",
+    "etherAddress" : "0x00eEeEEEeEEeEEEeEeeeEeEEeeEeeeeEEEeEEbb0"
+  },
+  "mongodb-multivm-1-config": {
+    "status": {
+      "success": {}
+    }
+  }
+}
+
+

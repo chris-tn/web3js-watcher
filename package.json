@@ -16,6 +16,7 @@
     "dotenv-safe": "^4.0.3",
     "firebase": "^5.8.0",
     "firebase-admin": "^6.3.0",
+    "firebase-functions": "^2.1.0",
     "firebase-queue": "^1.6.1",
     "web3": "^1.0.0-beta.33"
   }
