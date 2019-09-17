@@ -43,6 +43,10 @@ Simply start the service.
 ```
 npm start BBO Transfer
 ```
+Run wacher fireBase Database and mintToken to Side-chain
+```
+npm run  watch BBWrap DepositEther ropsten rinkeby
+```
 
 `BBO` is contract Name have config in ./src/abi/config
 `Transfer` is event Name

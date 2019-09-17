@@ -4,15 +4,20 @@
   "description": "Node js watching events logs and save to Firebase",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "watch": "node src/app.js"
   },
   "keywords": [],
   "author": "Chris Nguyen <ksmanhtuong103@gmail.com>",
   "license": "",
   "dependencies": {
+    "@google-cloud/pubsub": "^0.23.0",
     "decimal.js": "^7.2.4",
     "dotenv-safe": "^4.0.3",
+    "firebase": "^5.8.0",
     "firebase-admin": "^6.3.0",
+    "firebase-functions": "^2.1.0",
+    "firebase-queue": "^1.6.1",
     "web3": "^1.0.0-beta.33"
   }
 }
